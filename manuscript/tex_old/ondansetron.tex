@@ -1,0 +1,150 @@
+
+\documentclass[twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{ifpdf,amsmath,amsthm,amssymb,amsfonts,newtxtext,newtxmath} 
+\usepackage{array,graphicx,dcolumn,multirow,hevea,abstract,hanging}
+\usepackage[labelfont=sc,textfont=sf]{caption}
+\usepackage[hyperfootnotes=false,breaklinks=true]{hyperref}
+\urlstyle{rm}
+\usepackage[hyphenbreaks]{breakurl}
+%-------additional packages-------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{pbox}
+\usepackage{lipsum}
+% DO NOT USE ADDITIONAL PACKAGES unless you make sure they work with Hevea.
+% You may define new commands, but these may cause other troubles, so try
+% to avoid it.
+%%%%%%%%%%%% VARIABLES
+\newcommand\totalrandomized{1088}
+\newcommand\pmales{75.3 \%}
+\newcommand\meanage{41.0}
+\newcommand\meandropout{35.4 \%}
+\newcommand\ptseeking{79.9 \%}
+\newcommand\ppsyd{75.2\%}
+\newcommand\psudd{10.9 \%}
+
+%1088 	0.753329 	41.006912 	0.353658 	0.799127 	0.248162 	0.109375
+
+% FOR BIBTEX USERS (Bibtex is not recommended, but we can use it):
+%\usepackage{natbib} % must come afer hyperfootnotes
+% insert the following after the \bibliography{} where the references go:
+%\bibliographystyle{apalike3}
+%\setlength{\bibsep}{0pt}
+% replace hyperref above with:
+%\usepackage[hyperfootnotes=false,breaklinks=true,linkbordercolor={1 1 1},citebordercolor={1 1 1}]{hyperref}
+
+\usepackage{booktabs} % \toprule \midrule \bottomrule \cmidrule(lr){a-b}
+% define centered and ragged columns:
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash }p{#1}} % can use m{}
+\newcolumntype{C}[1]{>{\centering\arraybackslash }p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }p{#1}}
+\newcolumntype{d}[1]{D{.}{.}{#1}} % d{3.2} for 3 places on l, 2 on r
+\newcommand{\mc}{\multicolumn}
+\topmargin=-.3in \oddsidemargin=-.1in \evensidemargin=-.1in \textheight=9in \textwidth=6.8in
+\setlength\tabcolsep{1mm}
+\setlength\columnsep{5mm}
+\setlength\abovecaptionskip{.5ex}
+\setlength\belowcaptionskip{.5ex}
+\setlength\belowbottomsep{.3ex}
+\setlength\lightrulewidth{.04em}
+\renewcommand\arraystretch{1.2}
+\renewcommand{\topfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{.9}
+% \renewcommand{\baselinestretch}{1.00} \large\normalsize % for fixing spaces
+\widowpenalty=1000
+\clubpenalty=1000
+\setlength{\parskip}{0ex}
+\let\tempone\itemize
+\let\temptwo\enditemize
+\let\tempthree\enumerate
+\let\tempfour\endenumerate
+\renewenvironment{itemize}{\tempone\setlength{\itemsep}{0pt}}{\temptwo}
+\renewenvironment{enumerate}{\tempthree\setlength{\itemsep}{0pt}}{\tempfour}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1} % start with first page
+
+\title{Ondansetron in alcohol use disorder: a systematic review}
+
+\author{
+Matias Ceau, Mélina Fatseas
+}
+
+
+\date{} % leave empty
+\begin{document} % goes here
+
+% fill in short title
+\newcommand{\jref}{https://www.u-bordeaux.fr}
+\newcommand{\jhead}{Université de Bordeaux}
+\newcommand{\jdate}{2021}
+\pagestyle{myheadings} \markright{\protect\small \href{\jref}{\jhead}, \jdate \hfill Ondansetron in alcohol use disorder\qquad}
+\begin{htmlonly}
+\href{\jref}{\jhead}, \jdate, pp.\
+\end{htmlonly}
+%\begin{latexonly}
+\onecolumn[
+\vspace{-.3in}
+{\small \href{\jref}{\jhead}, \jdate}
+%\end{latexonly}
+
+\maketitle
+
+%\begin{latexonly}
+\vspace{-3mm}
+\begin{onecolabstract}
+%\end{latexonly}
+\noindent\textbf{Context} Alcohol use disorder (AUD) is a frequent disorder. Few treatments have shown a great efficacy in clinical studies. It is hypothetized that this is due to the fact that AUD suffering people constitute a heterogeneous group composed of various endophenotypes. Ondansetron, a selective $\text{5-HT}_3$ receptor antagonist, has been evaluated in AUD and partciularly in certain subgroups of patients. This review presents clinical studies evaluating its impact.\\ 
+\textbf{Methods} A systematic review was conducted on Pubmed and Wiley Online Library. All 19 clinical trials involving the use of ondansetron in AUD where included.\\
+\textbf{Results} Ondansetron was found to be effective mostly in certain subgroups of AUD-suffering patients. The identified subgroups were based on clinical evaluation (age of onset, personality type) and genotype. A number of limitations remains and further studies are needed.\\
+\noindent
+\textbf{Keywords} \textit{alcohol use disorder, ondansetron, $\text{5-HT}_3$ receptors, serotonin, craving, pharmacogenetics, personnalized medicine}
+%\begin{latexonly}
+\end{onecolabstract}\bigskip
+%\end{latexonly}
+
+\saythanks
+
+\setlength{\baselineskip}{12pt plus.2pt}
+%---------------------------------------------------------------------------------TABLES------------------------------------------------------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section*{Introduction}
+\input{Content/introduction}
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section*{Methods}
+\input{Content/methods}
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section*{Results} 
+\input{Content/results}
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section*{Discussion}
+\input{Content/discussion}
+
+\renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
+
+\bibliographystyle{unsrt}
+
+\bibliography{references.bib} % The file containing the bibliography
+%-----------------
+\newpage
+\input{tables/populations}
+\input{tables/efficacy1}
+\input{tables/efficacy2}
+\input{tables/efficacy3}
+\input{tables/moderators}
+\input{tables/flowchart}
+%-------------
+\begin{figure}[t!]
+\includegraphics[width=\columnwidth]{pictures/ROB2.eps}
+\caption{Risk of bias traffic-light plot (Cochrane Rob2) for the 19 RCT.}
+\label{fig:trafficlight}
+\end{figure}
+%---------------
+\input{tables/NOS}
+
+\end{document}

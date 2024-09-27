@@ -1,0 +1,90 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=1cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{ifpdf,amsmath,amsthm,amssymb,amsfonts,newtxtext,newtxmath} 
+\usepackage{array,graphicx,dcolumn,multirow,hanging}
+\usepackage[labelfont=sc,textfont=sf]{caption}
+\usepackage[hyperfootnotes=false,breaklinks=true]{hyperref}
+\urlstyle{rm}
+\usepackage[hyphenbreaks]{breakurl}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorlinks=true]{hyperref}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+%%%%%
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{pbox}
+\usepackage{lipsum}
+%%%%%
+\newcommand\totalrandomized{1088}
+\newcommand\pmales{75.3 \%}
+\newcommand\meanage{41.0}
+\newcommand\meandropout{35.4 \%}
+\newcommand\ptseeking{79.9 \%}
+\newcommand\ppsyd{75.2\%}
+\newcommand\psudd{10.9 \%}
+%%%%%%%
+
+
+
+\title{Ondansetron in alcohol use disorder: a systematic review}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\textbf{Context} Alcohol use disorder (AUD) is a frequent disorder. Few treatments have shown a great efficacy in clinical studies. It is hypothetized that this is due to the fact that AUD suffering people constitute a heterogeneous group composed of various endophenotypes. Ondansetron, a selective $\text{5-HT}_3$ receptor antagonist, has been evaluated in AUD and partciularly in certain subgroups of patients. This review presents clinical studies evaluating its impact.\\ 
+\textbf{Methods} A systematic review was conducted on Pubmed and Wiley Online Library. All 19 clinical trials involving the use of ondansetron in AUD where included.\\
+\textbf{Results} Ondansetron was found to be effective mostly in certain subgroups of AUD-suffering patients. The identified subgroups were based on clinical evaluation (age of onset, personality type) and genotype. A number of limitations remains and further studies are needed.\\
+\textbf{Keywords} \textit{alcohol use disorder, ondansetron, $\text{5-HT}_3$ receptors, serotonin, craving, pharmacogenetics, personnalized medicine}
+\end{abstract}
+
+\section*{Introduction}
+\input{Content/introduction}
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section*{Methods}
+\input{Content/methods}
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section*{Results} 
+\input{Content/results}
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section*{Discussion}
+\input{Content/discussion}
+
+\renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
+
+\bibliographystyle{unsrt}
+
+\bibliography{references.bib} % The file containing the bibliography
+%-----------------
+\newpage
+\input{tables/populations}
+\input{tables/efficacy1}
+\input{tables/efficacy2}
+\input{tables/efficacy3}
+\input{tables/moderators}
+\input{tables/flowchart}
+%-------------
+\begin{figure}[t!]
+\includegraphics[width=\columnwidth]{pictures/ROB2.eps}
+\caption{Risk of bias traffic-light plot (Cochrane Rob2) for the 19 RCT.}
+\label{fig:trafficlight}
+\end{figure}
+%---------------
+\input{tables/NOS}
+
+\end{document}
