@@ -56,19 +56,6 @@
             "group": "52ff33cb8a2596c3"
           },
           {
-            "id": "e3d06b6da11b4535",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "memoire.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": true
-              }
-            }
-          },
-          {
             "id": "d6ae4793d6525e91",
             "type": "leaf",
             "state": {
@@ -82,20 +69,20 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
-        "id": "a73dc10bf13131a8",
+        "id": "9edede6748f15fe2",
         "type": "tabs",
         "children": [
           {
-            "id": "8fc39c0025fe8d9e",
+            "id": "2495519cf7988924",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "memoire.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": false,
                 "source": true
               }
@@ -273,10 +260,11 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "909d42ba72ac89e3",
+  "active": "d6ae4793d6525e91",
   "lastOpenFiles": [
-    "old_references.md",
+    "@johnson2000OndansetronReductionDrinking.md",
     "memoire.md",
+    "old_references.md",
     "EXPORTS/presentations/presentation_reu_24-05-30/diapo_pubmed-search-methods-french-obsidian.md",
     "ANALYSIS/review_process.md",
     "NOTES/CASES/nots_21_24/AVCN20211176.md",
@@ -301,7 +289,6 @@
     "NOTES/REVIEW/authors/Simonsson, Otto.md",
     "NOTES/REVIEW/authors/bremler.md",
     "ORG/2024-07-09_revue_psychedelique_alex.md",
-    "ORG/2024-05-30-réunion.md",
     "NOTES/_metadata/templates",
     "NOTES/_metadata/ntypes",
     "NOTES/_metadata",

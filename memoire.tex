@@ -1,0 +1,990 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=30mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{\textbf{Ondansetron in alcohol use disorder:}}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{a systematic review}
+\author{Matias Ceau\\
+Pr Mélina Fatseas}
+\date{November 2024}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\textbf{Context} Alcohol use disorder (AUD) is a frequent disorder. Few
+treatments have shown a great efficacy in clinical studies. It is
+hypothetized that this is due to the fact that AUD suffering people
+constitute a heterogeneous group composed of various endophenotypes.
+Ondansetron, a selective 5HT3 receptor antagonist, has been evaluated in
+AUD and partciularly in certain subgroups of patients. This review
+presents clinical studies evaluating its impact.\\
+\textbf{Methods} A systematic review was conducted on Pubmed and Wiley
+Online Library. All 19 clinical trials involving the use of ondansetron
+in AUD where included.\\
+\textbf{Results} Ondansetron was found to be effective mostly in certain
+subgroups of AUD-suffering patients. The identified subgroups were based
+on clinical evaluation (age of onset, personality type) and genotype. A
+number of limitations remains and further studies are needed.\\
+\textbf{Key words} alcohol use disorder, ondansetron, 5-HT3 receptors,
+serotonin, craving, pharmacogenetics, personnalized medicine*
+\end{abstract}
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Introduction}\label{introduction}
+
+Alcohol use disorder (AUD) is a heterogeneous and chronic relapsing
+disorder resulting in a complex interaction between neurobiological,
+genetic and environmental factors. Despite the demonstrated efficacy of
+some approved medications (acamprosate, naltrexone, disulfiram), a key
+barrier is the fact that these medications are not effective in every
+patient pointing out the need for more personalized therapy approaches
+to overcome this heterogeneity. In this perspective, major advances in
+pharmacogenetics have highlighted distinct clinical subgroups of AUD
+according to genetic variation, that could be associated with
+differential treatment responses. Thus, the identification of patient
+subtypes that are most likely to respond favorably to different
+medications is crucial with a need for a better targeting of medication
+to specific patients.
+
+Amongst the emerging pharmacotherapies for AUD, Ondansetron (IUPAC name:
+(RS)-9-Methyl-3-
+{[}(2-methyl-1H-imidazol1-yl)methyl{]}-2,3-dihydro-1Hcarbazol-4(9H)-one),
+a selective antagonist of the 5-HT3 receptor, has shown some promising
+results. Ondansetron is approved by ANSM in France and FDA in the USA as
+an antiemetic for cancer treatment-induced and anesthesia related nausea
+and vomiting. In the late 1980s, Hagan \emph{et al.} (Hagan et al. 1987)
+showed that the injection of ondansetron in the ventral tegmental area
+of the rat brain lessened induced hyperactivation in the nucleus
+accumbens, pointing out the tight relationship between serotonin
+function and the mesolimbic dopaminergic reward system. Based on these
+findings and the role of dopaminergic activity on the rewarding effects
+of alcohol, ondansetron was thought to attenuate the pleasurable
+subjective effects of alcohol and thereby to reduce alcohol consumption
+in AUD suffering patients. Some phase 1 clinical studies ((Grant and
+Barrett 1991), (B. A. Johnson et al. 1993)) found promising results in
+healthy male volunteers, and provided preliminary evidence on the role
+of ondansetron in reducing the reinforcing properties of alcohol and the
+desire to use by 5-HT3 receptor blockade. Later phase 2 clinical studies
+((Bankole A. Johnson, Roache, et al. 2000) , (Kranzler et al. 2003))
+suggested differential effects among AUD patients depending on the age
+of onset (Early-onset alcoholism EOA/Late-onset alcoholism LOA) (Varma
+et al. 1994), which is hypothesized to be linked to individual genetic
+variations. Interestingly, compared to placebo, ondansetron was
+associated with reduced drinking and significant reduction in overall
+craving in randomized placebo-controlled studies ((Bankole A. Johnson,
+Roache, et al. 2000) + Johnson 2002), but only among patients who
+developed AUD before age 25 only (EOA), and not among late-onset
+patients (LOA), presumably by ameliorating serotonergic abnormality
+
+Furthermore, as the functional state of the serotonin transporter
+protein (5-HTT) is an important factor of the serotonergic function
+control, more recent pharmacogenetic studies have investigated the
+potential role of 5-HTT genotype on drinking behaviors and alcohol
+craving ((Ait-Daoud et al. 2009)). 5-HTT gene polymorphisms, involving
+two variants, a short form (S) and a long form (L), have been shown to
+be associated with differential serotonin neurotransmission, which could
+moderate the rewarding effects and the craving for alcohol, and thereby
+ondansetron treatment response among AUD suffering patients. In line
+with this hypothesis, ondansetron was administered in a large study
+among AUD patients according to the 5-HTT polymorphism {[}ref Johnson
+2011{]}. Participants with the LL genotype significantly reduced their
+drinking compared to the LS or SS genotype, suggesting that ondansetron
+could represent an interesting approach for the personalized treatment
+of AUD according to specific polymorphism of the 5-HTT gene.
+
+Direct inhibition of the 5HT3 receptor is thus hypothesized to reduce
+alcohol use and alleviate alcohol craving, that is currently considered
+as a key determinant of relapse vulnerability as well as a major
+treatment target. A better knowledge of the potential impact of 5-HT
+antagonist medication on alcohol consumption and craving in AUD, as well
+as individual clinical subtypes and genotype associated with treatment
+response is therefore a critical issue to improve treatment approaches
+and develop personalized medicine in the pharmacotherapy of alcohol use
+disorder. The aim of this systematic review is to address this issue by
+assessing scientific evidence of the efficacy of ondansetron on alcohol
+consumption and craving as well as clinical or genetic predictors of
+treatment response.
+
+\section{Methods}\label{methods}
+
+\subsection{2.1 Research design}\label{research-design}
+
+The study involved a systematic review of the literature based on the
+Preferred Reporting Items for Systematic reviews and Meta-Analyses
+(PRISMA) guidelines {[}35{]}).
+
+\subsection{2.2. Databases and search
+strategy}\label{databases-and-search-strategy}
+
+This review was based on the following databases: PUBMED/MEDLINE,
+Psychinfo, Cochrane, Wiley Online Library. The search was performed for
+all years up to November, 2024.
+
+The following search terms were used:
+
+For Medline search, the relevant articles were identified by combining
+the terms:
+
+\begin{verbatim}
+("ondansetron"[MeSH Terms] OR "ondansetron"[All Fields]) AND ("alcoholism"[MeSH Terms] OR "alcoholism"[All Fields] OR "alcohol use disorder"[All Fields] OR "alcohol abuse"[All Fields] OR "AUD"[All Fields])
+\end{verbatim}
+
+For the Wiley Online Library search we used the keywords
+\texttt{"ondansetron"\ AND\ "alcoholism"}.
+
+For the PsycInfo search, the keywords were
+\texttt{"ondansetron\ or\ zofran"\ AND\ "alcoholism\ or\ alcohol\ dependence\ or\ alcohol\ abuse\ or\ alcoholic\ or\ alcohol\ addiction"}.
+
+Finally, the Cochrane Library was used by searching
+\texttt{("alcohol\ use\ disorder"\ OR\ "alcohol\ dependance")\ AND\ "ondansetron"\ in\ "Title\ Abstract\ Keyword"}.
+
+\subsection{2.3. Eligibility criteria}\label{eligibility-criteria}
+
+Studies were included if they met the following inclusion criteria : +
+Reported as a peer reviewed journal + Concerning individuals suffering
+from AUD, with no restrictive criteria regarding age, sex, ethnic
+origin, or place of living. + Assessing the impact of ondansetron on AUD
+and/or predictors of ondansetron treatment response + Papers published
+in English
+
+Studies were excluded if they were : - Preclinical studies, reviews,
+opinion papers, protocols, case reports, - Animal studies - Studies in
+healthy volunteers - Not published in English
+
+\subsection{2.4. Study selection}\label{study-selection}
+
+Two authors independently examined all titles and abstracts. Relevant
+articles were obtained in full-text and assessed for inclusion criteria
+separately by the two reviewers based on the inclusion and exclusion
+criteria previously mentioned. Disagreements were resolved via
+discussion of each article for which conformity to inclusion and
+exclusion criteria were uncertain and a consensus was reached. The
+reference lists of major papers were also manually screened in order to
+ensure comprehensiveness of the review. All selected studies were read
+in full to confirm inclusion criteria, study type and study population.
+
+\subsection{2.5. Assessment of risk of bias in included
+studies}\label{assessment-of-risk-of-bias-in-included-studies}
+
+Two review authors independently assessed the risk of bias of each
+included study using the revised Cochrane tool for assessing risk of
+bias in randomized trials (RoB 2 (Sterne et al. 2019)), in accordance
+with methods recommended by Cochrane collaboration. The risk-of-bias
+plot in Figure 2 was generated using the Robvis online tool (McGuinness
+and Higgins 2020). The following judgments were used : high risk, low
+risk or unclear (either lack of information or uncertainty over the
+potential for bias). Authors resolved disagreements by consensus, and a
+third author was consulted to resolve disagreements if necessary.
+
+The Newcastle Ottawa Scale (NOS, (Peterson et al. 2011)) was used for
+assessing single-arm non-randomized studies. However, it had to be
+adapted by removing the Comparability item for two of the studies that
+lacked a control group.
+
+\subsection{2.6. Collecting data}\label{collecting-data}
+
+\section{Results}\label{results}
+
+\subsection{3.1. Study selection}\label{study-selection-1}
+
+A total of 90 results were found in the MEDLINE database, 68 on
+PsycInfo, 35 on Cochrane Library and 8 additional studies were found on
+Wiley Online Library. A total of 134 articles were identified through
+the search of the databases. After reading the full text, 21 met
+inclusion criteria for this review. This process is described in the
+PRISMA flowchart \textbf{(Figure 1).} Among the 21 included studies, 18
+were randomized controlled trials (RCT) or analysis of previous RCT, and
+3 were prospective open-label studies ((Kranzler et al. 2003), (Dawes,
+Johnson, Ait-Daoud, et al. 2005), (Dawes, Johnson, Ma, et al. 2005)).
+The study duration ranged from 2 to 12 weeks. The selected articles were
+published between 1994 and 2015.
+
+\subsection{3.2. Quality and risk of bias
+assessment}\label{quality-and-risk-of-bias-assessment}
+
+Randomized controlled trials where analyzed using the Cochrane Rob2 tool
+(see Figure 2 for the traffic-light plot). Two studies had a low concern
+of bias ((Sellers et al. 1994), (Myrick et al. 2008)), most of the
+studies showed some concern of bias and one had a high concern ((Corrêa
+Filho and Baltieri 2013)). The high dropout rate of the studies was the
+most concerning factor and affected the Domain 3 of the Risk of Bias
+tool which represent bias due to missing outcome result. For the 3
+prospective study, the Newcastle-Ottawa scale was used (see Figure 6).
+The risk of bias was evaluated as acceptable as one study scored 7 out
+of 9 possible points and the two others scored 6 out of 7 (adapted
+score).
+
+\subsection{3.3. Study results}\label{study-results}
+
+Results are presented according to their primary outcomes. Among the 21
+included studies, x assessed odansetron efficacy through alcohol use
+(n=11), craving (n=) and mood effect (n=). X studies examined moderators
+of treatment outcomes. The first set of studies \textbf{(Tables 2, 3 and
+4)} investigated alcohol use, craving and mood disturbances as clinical
+outcomes for odansetron efficacy, while the second set (\textbf{Table
+5}) examined the moderators of treatment outcomes.
+
+\subsubsection{3.3.1 Sample
+characteristics}\label{sample-characteristics}
+
+The included studies involved 11 distinct study populations whom
+characteristics are described in \textbf{Table 1.}
+
+In total, !1088 subjects were enrolled, of which !1071 !(\%) met
+criteria for alcohol use disorder. Patients were mostly males !n= ;!75.3
+\% with a mean age of !41.0 years.
+
+Patients enrolled were diagnosed as alcohol dependent according to the
+DSM-III-TR ((Sellers et al. 1994), (Bankole A. Johnson, Roache, et al.
+2000)), DSM-IV ((Myrick et al. 2008), (Bankole A. Johnson, Ait‐Daoud,
+and Prihoda 2000), (Ait-Daoud et al. 2001), (Kranzler et al. 2003),
+(Dawes, Johnson, Ait-Daoud, et al. 2005), (Bankole A. Johnson et al.
+2011)), DSM-IV-TR ((Kenna et al. 2009), (Kenna, Zywiak, Swift, McGeary,
+Clifford, Shoaff, Vuittonet, et al. 2014)), DSM-5 ((Brown et al. 2021))
+or ICD-10 ((Corrêa Filho and Baltieri 2013)). Some studies required
+additional criteria, such as more than 35 standard drinks per week for
+men or 28 for women ((Kenna et al. 2009), (Kenna, Zywiak, Swift,
+McGeary, Clifford, Shoaff, Vuittonet, et al. 2014)), more than 30 drinks
+per week for men or 21 for women ((Seneviratne and Johnson 2012)), at
+least 15 standard drinks in the week before enrollement ((Brown et al.
+2021)), more than 3 standard drinks per day and a Michigan Alcohol
+Screening Test greater than 5 ((Bankole A. Johnson, Ait‐Daoud, and
+Prihoda 2000), (Bankole A. Johnson, Roache, et al. 2000), (Ait-Daoud et
+al. 2001)), an AUDIT score greater than 8 ((Bankole A. Johnson et al.
+2011)) or a diagnosis before the age of 25 ((Brown et al. 2021)).
+Whereas most trials ((Sellers et al. 1994), (Bankole A. Johnson,
+Ait‐Daoud, and Prihoda 2000), (Bankole A. Johnson, Roache, et al. 2000),
+(Ait-Daoud et al. 2001), (Kranzler et al. 2003), (Dawes, Johnson,
+Ait-Daoud, et al. 2005)) concerned treatment-seeking patients, some
+((Myrick et al. 2008), (Kenna et al. 2009), (Kenna, Zywiak, Swift,
+McGeary, Clifford, Shoaff, Vuittonet, et al. 2014)) did not. Drug use
+and disorder was considered as an exclusion criteria in most included
+studies. Thus, participants who reported drug use ((Kranzler et al.
+2003), (Myrick et al. 2008), (Kenna et al. 2009), (Bankole A. Johnson et
+al. 2011), (Kenna, Zywiak, Swift, McGeary, Clifford, Shoaff, Vuittonet,
+et al. 2014)) and/or had a positive drug screening test ((Sellers et al.
+1994), (Bankole A. Johnson, Ait‐Daoud, and Prihoda 2000), (Bankole A.
+Johnson, Roache, et al. 2000), (Ait-Daoud et al. 2001), (Myrick et al.
+2008), (Corrêa Filho and Baltieri 2013)) were often excluded, except for
+cannabis use in a few trials ((Dawes, Johnson, Ait-Daoud, et al. 2005),
+(Myrick et al. 2008)). Receipt of alcohol use disorder treatment prior
+to enrollment was an exclusion criteria; one study ((Sellers et al.
+1994)) considered treatment over the previous 12 months, and 3 ((Bankole
+A. Johnson, Cloninger, et al. 2000), (Ait-Daoud et al. 2001), (Dawes,
+Johnson, Ait-Daoud, et al. 2005)) over the previous 30 days.
+
+Some studies excluded participants who had been treated with stimulants,
+sedatives, hypnotics or with treatment that could have an effect on
+alcohol consumption or mood ((Corrêa Filho and Baltieri 2013), (Bankole
+A. Johnson, Roache, et al. 2000), (Bankole A. Johnson, Ait‐Daoud, and
+Prihoda 2000), (Ait-Daoud et al. 2001), (Dawes, Johnson, Ait-Daoud, et
+al. 2005)). In one study ((Brown et al. 2021)), having been treated with
+naltrexone, acamprosate, disulfiram or topiramate 2 weeks prior
+inclusion, or current treatment with phenytoin, carbamazepine,
+rifampicine, apomorphine or tramodol (due to potential interactions with
+ondansetron) were exclusion criteria.
+
+Psychiatric disorders were exclusion criteria in most studies ((Bankole
+A. Johnson, Roache, et al. 2000), (Bankole A. Johnson, Ait‐Daoud, and
+Prihoda 2000), (Ait-Daoud et al. 2001) (Kranzler et al. 2003), (Kenna et
+al. 2009), (Bankole A. Johnson et al. 2011), (Kenna, Zywiak, Swift,
+McGeary, Clifford, Shoaff, Fricchione, et al. 2014)). Two studies
+considered only major diagnosis ((Myrick et al. 2008)) or clinically
+significant disorders ((Corrêa Filho and Baltieri 2013) (Dawes, Johnson,
+Ait-Daoud, et al. 2005)) as exclusion criteria. In the study of Sellers
+\emph{et al.} ((Sellers et al. 1994)), a Montgomery/Asberg Depression
+scale score below 15 and a Spielberg State-Trait anxiety inventory score
+below 55 were required. In contrast, one study ((Brown et al. 2021))
+enrolled only people with a concurrent psychiatric diagnosis.
+
+Many studies also required good health at enrollment and notably
+excluded frequent AUD comorbidities such as elevated bilirubin ((Bankole
+A. Johnson, Roache, et al. 2000), (Kenna et al. 2009)), liver enzymes
+((Dawes, Johnson, Ait-Daoud, et al. 2005), (Kenna et al. 2009)), (Brown
+et al. 2021)), liver cirrhosis ((Corrêa Filho and Baltieri 2013), (Brown
+et al. 2021)) or severe alcohol withdrawal ((Bankole A. Johnson,
+Ait‐Daoud, and Prihoda 2000), (Bankole A. Johnson, Roache, et al. 2000),
+(Dawes, Johnson, Ait-Daoud, et al. 2005)) ((Brown et al. 2021)).
+
+Considering participants subtypes, 9 studies ((Bankole A. Johnson,
+Roache, et al. 2000), (Bankole A. Johnson, Ait‐Daoud, and Prihoda 2000),
+(Ait-Daoud et al. 2001), (Ait‐Daoud et al. 2001), (Bankole A. Johnson et
+al. 2002), (Bankole A. Johnson et al. 2003), (Kranzler et al. 2003),
+(Roache et al. 2008)), (Brown et al. 2021)) focused on clinical
+characteristics based on age of onset, before or after the age of 25
+(EOA and LOA, while 6 studies examined patient subtypes according to
+their genotypes ((Bankole A. Johnson et al. 2011), (Seneviratne and
+Johnson 2012), (Bankole A. Johnson et al. 2013), (Kenna, Zywiak, Swift,
+McGeary, Clifford, Shoaff, Fricchione, et al. 2014), (Kenna, Zywiak,
+Swift, McGeary, Clifford, Shoaff, Vuittonet, et al. 2014), (Hou et al.
+2015)). The most frequent investigated gene was SLC6A4, coding for the
+serotonin transporter that contains a polymorphism in the promoter
+region, the 5-HTT-linked polymorphic region, with a "short" (S) and
+"long" (L). Individuals possessing two long alleles (L/L) have been
+found to respond differently to serotoninergic treatments than those
+having either one (L/S) or two (S/S) short alleles. Another allele,
+rs1042173-TT, also on the serotonine transporter gene predicted a better
+response to ondansetron on alcohol use. Other genes of interest were
+HTR3A and HTR3B, which regulate the 5HT3 receptor had polymorphisms
+which influenced response to ondansetron (rs1150226-AG and rs1176713-GG
+in HTR3A and rs17614942-AC in HTR3B).
+
+Ondansetron dosage ranged from 1 µg/kg bid (twice a day) to 16 mg per
+day with the most frequent dosage being 4 µg/kg bid. One study ((Brown
+et al. 2021)) used a flexible dosage according to treatment response
+that could range from 0.5 to 4 mg bid (with a mean dose of 3.24 ± 2.64
+mg/day).
+
+Four studies ((Bankole A. Johnson, Ait‐Daoud, and Prihoda 2000),
+(Ait-Daoud et al. 2001), (Ait‐Daoud et al. 2001), (Myrick et al. 2008)),
+involving 127 patients, used ondansetron in combination with naltrexone
+(50 mg/d). Three studies (n=97 patients) compared ondansetron (0.5 mg/d)
+to sertraline (200 mg/d) ((Kenna et al. 2009), (Kenna, Zywiak, Swift,
+McGeary, Clifford, Shoaff, Fricchione, et al. 2014), (Kenna, Zywiak,
+Swift, McGeary, Clifford, Shoaff, Vuittonet, et al. 2014)). Treatment
+duration ranged from 8 days to 11 weeks. Pill count or riboflavin dosage
+were used for assessing treatment compliance.
+
+\subsubsection{3.3.2 Treatment outcomes}\label{treatment-outcomes}
+
+Efficacy was most often assessed by evaluating the number of standard
+drinks and derived variables such as defined by the Alcohol Timeline
+Followback (TLFB) method (Sobell and Sobell 1992). Drinking outcomes
+were drinks per day (DD), drinks per drinking day (DDD), percentage of
+day abstinent (PDA), heavy drinking days (days with more than 5 drinks
+per day), percentage of heavy drinking day (PHDD). Standard drink
+definition varied across the studies, either 12 g ((Bankole A. Johnson,
+Roache, et al. 2000)Bankole A. Johnson et al. (2011)), 13 g ((Sellers et
+al. 1994) or 14 g (Corrêa Filho and Baltieri 2013)) of pure ethanol.
+Furthermore, objective measures of alcohol use were used in 8 studies
+with either carbohydrate deficient transferrin (CDT) ((Bankole A.
+Johnson, Roache, et al. 2000), (Ait‐Daoud et al. 2001), (Kranzler et al.
+2003),Brown et al. (2021)), or the volume of alcohol consumed during
+self-administration ((Kenna et al. 2009), (Kenna, Zywiak, Swift,
+McGeary, Clifford, Shoaff, Fricchione, et al. 2014), (Kenna, Zywiak,
+Swift, McGeary, Clifford, Shoaff, Vuittonet, et al. 2014)), and
+\(\gamma\)-glutamyltransferase in one study ((Brown et al. 2021)). X
+studies examined the effects of ondansetron on alcohol craving. Some
+studies ((Ait-Daoud et al. 2001), (Bankole A. Johnson et al. 2002)Myrick
+et al. (2008)) evaluated alcohol craving, either with a visual
+analogical scale or with the obsessive compulsive drinking scale (OCDS
+(Anton, Moak, and Latham 1996)) and the Penn Alcohol Craving Scale
+(PACS). ((Brown et al. 2021)) One study ((Dawes, Johnson, Ma, et al.
+2005)) used the Adolescent Obsessive--Compulsive Drinking Scale
+(A-OCDS). One study ((Myrick et al. 2008)) used functional magnetic
+resonance imaging to determine ventral striatum activation during
+cue-exposure, in addition to cue-induced craving assessment. Finally,
+two studies examined the effcts of ondasetron on mood. One study
+((Bankole A. Johnson et al. 2003)) used the Profile of Mood States
+(Mcnair, Lorr, and Droppleman 1989) to evaluate attenuation of mood
+disturbances, and another study ((Brown et al. 2021)) the Hamilton
+Rating Scale for Depression (HRSD), the Young Mania Rating Scale (YMRS),
+and the Inventory of Depressive Symptomatology--Self-report (IDS-SR).
+
+\subsubsection{3.3.3 Effects of ondansetron on alcohol use
+reduction}\label{effects-of-ondansetron-on-alcohol-use-reduction}
+
+Eleven studies, summarized in \textbf{Table 2}, evaluated the impact of
+ondansetron, alone or in combination with naltrexone, on alcohol use.
+The main outcomes were mostly self-reported changes in alcohol
+consumption according to the TLFB method, plasma CDT ((Bankole A.
+Johnson, Roache, et al. 2000), (Ait‐Daoud et al. 2001), (Kranzler et al.
+2003), (Brown et al. 2021)), GGT ((Brown et al. 2021)) or the volume of
+alcohol consumed during self-administration ((Kenna et al. 2009),
+(Kenna, Zywiak, Swift, McGeary, Clifford, Shoaff, Fricchione, et al.
+2014), (Kenna, Zywiak, Swift, McGeary, Clifford, Shoaff, Vuittonet, et
+al. 2014)).
+
+In a sample of 71 males suffering from alcohol dependence (DSM-III-TR),
+Sellers \emph{et al.} (Sellers et al. 1994) showed a significant impact
+of ondansetron on alcohol reduction, when patients drinking more than 10
+drinks per day at baseline were excluded from the analysis, with the
+lower ondansetron dose (0,25 mg/d) producing the greatest reduction from
+baseline.
+
+One randomized control trial (Bankole A. Johnson, Ait‐Daoud, and Prihoda
+2000) (n = 20) examined the impact of a combination of ondansetron and
+naltrexone only among EOA participants. Results found significant effect
+on reduction of drinks per day, drinks per drinking day, as well as a
+trend in reducing the percentage of abstinent days, compared to placebo.
+
+A subsequent analysis of the sample by Ait-Daoud \emph{et al.} showed
+that the combination of ondansetron and naltrexone was associated with
+significantly lower CDT levels (Ait‐Daoud et al. 2001).
+
+In the only trial taking place outside of North America, Corrêa Filho
+\emph{et al.} (Corrêa Filho and Baltieri 2013) showed a significant
+reduction of heavy drinking days (7,8 \% vs 11,7\%, p=0.02) but not of
+other alcohol-related clinical outcomes.
+
+\subsubsection{3.3.4. Effects of ondansetron on alcohol use reduction
+according patient
+subtypes}\label{effects-of-ondansetron-on-alcohol-use-reduction-according-patient-subtypes}
+
+\textbf{EOA vs LOA}
+
+In a later trial (Johnson \emph{et al.} 2000b (Bankole A. Johnson,
+Roache, et al. 2000)), Johnson et al.~examined ondansetron efficacy
+according to patient subtypes (EOA vs LOA) among a sub-sample of 271
+patients. Ondansetron was found to be significantly more effective than
+placebo in reducing alcohol consumption among EOAs but not LOAs.
+Ondansetron at 4 µg/kg \emph{b.i.d.} was more effective than placebo on
+drinks per day (1.56 vs 3.30, p = 0.01), drinks per drinking day (4.28
+vs 6.90, p = 0.004), percentage of day abstinent (70.10 vs 50.20, p =
+0.02) and mean log CDT ratio (-0.19 vs 0.12, p = 0.01). Among EOAs, all
+other dosages were superior to placebo on the two first criteria. These
+results were subsequently replicated by Kranzler \emph{et al.} in 2003
+(Kranzler et al. 2003), who showed a significant reduction (compared to
+baseline) in most alcohol-related measures (drinks per day, drinks per
+drinking days, DrinC total score) among EOAs and LOAs who received
+ondansetron (4 µg/kg \emph{b.i.d.}). A significant difference was also
+found according to patient subtypes, with significant greater decrease
+of drinks per day, drinks per drinking day and DrinC total score among
+EOAs. Changes in the level of carbohydrate-deficient transferrin were
+consistent with changes in self-reported drinking behavior.
+
+\textbf{Patient genotypes}
+
+In a randomized controlled trial, Johnson \emph{et al.} (Bankole A.
+Johnson et al. 2011) randomized 283 patients by genotype in the
+5\textquotesingle-regulatory region of the 5-HTT gene (LL/LS/SS).
+Individuals with the L/L genotype receiving ondansetron significantly
+reduced their alcohol consumption, measured by drinks per drinking day
+and percentage of days abstinent as compared to placebo (respectively
+-1.62, p = 0.007 and 11.27\%, p = 0.023).
+
+Two other studies examined treatment response according to the L/L
+genotype using a self-administration experiment. The study of Kenna
+\emph{et al.} (Kenna et al. 2009), among 15 non-treatment seeking
+individuals, found that participants with the L/L genotype who were
+administered ondansetron (4 µg/kg \emph{b.i.d.}) during 3 weeks drank
+significantly less alcohol during an alcohol self-administration
+procedure, than their counterparts being treated with sertaline (200 mg
+per day). In another clinical trial involving 77 participants, the same
+authors provided limited support that ondansetron may reduce drinking in
+non treatment-seeking individuals with the LL genotype ((Kenna, Zywiak,
+Swift, McGeary, Clifford, Shoaff, Vuittonet, et al. 2014)). Further
+analysis ((Kenna, Zywiak, Swift, McGeary, Clifford, Shoaff, Fricchione,
+et al. 2014)) pinpointed gender differences as L/L women treated with
+ondansetron and S/L or S/S women treated with sertraline had
+significantly less drinks per drinking days and drank during alcohol
+self-administration experiment.
+
+\textbf{Alcohol and bipolar disorder participants}
+
+Recently, Sherwood \emph{et al.} (Brown et al. 2021) evaluated the
+efficacy of ondansetron in 70 patients suffering from both alcohol use
+disorder and bipolar disorder. Results showed a trend in greater
+reduction of drinking as measured by the TLFB method that failed to
+reach significance.
+
+\subsubsection{3.3.5. Effects on craving and cue-induced
+craving}\label{effects-on-craving-and-cue-induced-craving}
+
+Four studies (\textbf{Table 3}) examined the impact of ondansetron on
+craving.
+
+An analysis of the study population of Johnson \emph{et al.} 2000a
+((Bankole A. Johnson, Ait‐Daoud, and Prihoda 2000)) found that the
+combination of ondansetron and naltrexone was significantly better than
+placebo in reducing craving among EOAs (Ait-Daoud et al. 2001). Johnson
+\emph{et al.} 2002 (Bankole A. Johnson et al. 2002) showed that
+ondansetron at 4 µg/kg \emph{b.i.d.} was associated with a significant
+reduction in craving (measured by visual analog scale) compared to the
+placebo group, but only in EOAs. In contrast, craving was significantly
+increased by ondansetron at 1 µg/kg \emph{b.i.d.} among LOAs.
+
+In a BOLD-MRI laboratory study, Myrick \emph{et al.} (Myrick et al.
+2008) examined ventral striatum activation of AUD patients during
+cue-exposure, according to treatment group (naltrexone, ondansetron, a
+combination of both or placebo), and compared to social-drinkers.
+Ventral striatum activation was significantly reduced in the naltrexone,
+combination and social-drinker groups, and this reduction was correlated
+with reduction in craving scores. Ondansetron alone was not
+significantly effective in the reduction of ventral striatum activation
+nor craving. There was however a trend in the reduction of both.
+
+The study of Sherwood \emph{et al.} (Brown et al. 2021) found no
+differences between ondansetron and placebo groups, among patients with
+both bipolar disorder and AUD.
+
+\subsubsection{3.3.6. Effects on mood
+disturbances}\label{effects-on-mood-disturbances}
+
+Two studies investigated the impact of ondansetron medication on mood
+(\textbf{Table 4}). One study ((Bankole A. Johnson et al. 2003)) showed
+that ondansetron significantly reduced mood disturbances as measured by
+the POMS scale among EAOs only. Sherwood \emph{et al.} (Brown et al.
+2021) showed that ondansetron was significantly more efficacious than
+placebo in the reduction of HRSD scores, but not of YMRS or IDS-SR
+scores, among patients suffering from both bipolar disorder and AUD.
+
+\subsubsection{3.3.7. Predictors of treatment
+outcomes}\label{predictors-of-treatment-outcomes}
+
+Finally, six studies, presented in \textbf{Table 5,} provided data on
+predictors of treatment outcomes.
+
+As ondansetron had previously been found useful in early onset
+alcoholism, Dawes \emph{et al.} (Dawes, Johnson, Ait-Daoud, et al. 2005)
+evaluated ondansetron among adolescents in a prospective, open-label
+trial, which showed that ondansetron was safe and well tolerated in
+adolescents with alcohol dependence. In a subsequent study (Dawes,
+Johnson, Ma, et al. 2005), they found that reduction of drinking
+correlated with reduction in craving. Roache \emph{et al.} 2008 (Roache
+et al. 2008) compared the prediction capabilities of the EOA/LOA
+typology to the type A/type B typology described by Babor \emph{et al.}
+1992 (Babor et al. 1992) (derived from Type I/II description by
+Cloninger \emph{et al.} (Cloninger 1987)). The A/B typology better
+described baseline severity of alcohol dependence but treatment response
+to ondansetron was significantly better predicted by the EOA/LOA
+typology.
+
+Seneviratne \emph{et al.} (Seneviratne and Johnson 2012) produced some
+evidence that 5'HTTPLR mRNA levels could be used as biomarker to
+evaluate treatment effectiveness in L/L-subjects treated with
+ondansetron.
+
+Two studies analysed the population of Johnson \emph{et al.} 2011
+(Bankole A. Johnson et al. 2011) and identified genotypes predicting
+treatment success. Johnson \emph{et al.} 2013 (Bankole A. Johnson et al.
+2013) found 5 genotypes that are highly prevalent in the general
+population and that predicted efficacy of ondansetron. Finally, Hou
+\emph{et al.} (Hou et al. 2015) further worked on identifying ways of
+predicting effectiviness of ondansetron and found that data mining
+approaches, such as interaction trees and virtual twins could simplify
+subgroup identification while limiting statistical errors.
+
+\section{Discussion}\label{discussion}
+
+To our knowledge, the present review is the only systematic review
+assessing efficacy of including ondansetron for the treatment of alcohol
+use disorder. A subsequent research identified 5 systematic reviews in
+the last 10 years that included the keywords `ondansetron' and `alcohol
+use disorder' or `alcoholism'. Bauer \emph{et al.} 2015 (Bauer et al.
+2015) focused on the influence of serotonergic gene variation in
+substance use pharmacotherapy and included four out of the 21 studies
+presented here. Naglich \emph{et al.} 2018 (Naglich et al. 2017) focused
+on combined pharmacotherapy for the treament of alcohol use and thus
+included 2 studies involving ondansetron and naltrexone. Cservenka
+\emph{et al.} 2017 (Cservenka, Yardley, and Ray 2016) focused on
+pharmacogenetics and the implication of ethnic diversity in the
+treatment of AUD and included 2 papers. Castrén \emph{et al.} 2019
+(Castrén, Mäkelä, and Alho 2019) focused on the recent findings in AUD
+pharmacotherapy and mentioned ondansetron without including any of the
+clinical trials. Finally, Bharadwaj \emph{et al.} 2018 (Bharadwaj,
+Selvakumar, and Kuppili 2018) focused on the pharmacotherapy for relapse
+prevention in AUD in the Indian setting and also mentioned ondansetron
+but didn't include any trial on this topic. One review (Thompson and
+Kenna 2015) focuses on the role of the serotonin transporter gene in AUD
+and thus cites 6 of the latest pharmacogenetics studies.
+
+Most of the clinical trials described in this systematic review have
+stringent inclusion criteria which greatly limits their external
+validity. Particularly, patients suffering from dual diagnosis or
+addicted to several substance (with the exception of nicotine) were
+often excluded. The high dropout rate (mean dropout rate 35.4\%) could
+impact the validity of the findings, but evidence to identify whether or
+not dropout rate favors medication is lacking.
+
+Finally, out of the seven registered trials that have no published
+papers yet, three haven't had any updates for more than ten years
+whereas one reported non significant results. This may pose a
+publication bias that is to be taken in consideration.
+
+\section{Conclusion}\label{conclusion}
+
+Whereas growing evidence tends to suggest efficacy of ondansetron as a
+treatment of alcohol use disorder in particular genetic subgroups,
+further studies are needed to fully conclude. In particular, there is a
+need for bigger studies evaluating long term changes in alcohol
+consumption. These studies should also have less exclusion criteria to
+maximize their external validity.
+
+\section{References}\label{references}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-ait-daoud2001CombiningOndansetronNaltrexone}
+Ait‐Daoud, Nassima, Bankole A. Johnson, Martin Javors, John D. Roache,
+and Nursen A. Zanca. 2001. {``Combining {Ondansetron} and {Naltrexone
+Treats Biological Alcoholics}: {Corroboration} of {Self}‐{Reported
+Drinking} by {Serum Carbohydrate Deficient Transferrin}, {A
+Biomarker}.''} \emph{Alcoholism: Clinical and Experimental Research} 25
+(6): 847--49. \url{https://doi.org/10.1111/j.1530-0277.2001.tb02289.x}.
+
+\bibitem[\citeproctext]{ref-ait-daoud2001CombiningOndansetronNaltrexonea}
+Ait-Daoud, Nassima, Bankole A. Johnson, Thomas J. Prihoda, and Irene D.
+Hargita. 2001. {``Combining Ondansetron and Naltrexone Reduces Craving
+Among Biologically Predisposed Alcoholics: Preliminary Clinical
+Evidence.''} \emph{Psychopharmacology} 154 (1): 23--27.
+\url{https://doi.org/10.1007/s002130000607}.
+
+\bibitem[\citeproctext]{ref-ait-daoud2009CanSerotoninTransporter}
+Ait-Daoud, Nassima, John D. Roache, Michael A. Dawes, Lei Liu, Xin-Qun
+Wang, Martin A. Javors, Chamindi Seneviratne, and Bankole A. Johnson.
+2009. {``Can Serotonin Transporter Genotype Predict Craving in
+Alcoholism?''} \emph{Alcoholism, Clinical and Experimental Research} 33
+(8): 1329--35. \url{https://doi.org/10.1111/j.1530-0277.2009.00962.x}.
+
+\bibitem[\citeproctext]{ref-anton1996ObsessiveCompulsiveDrinking}
+Anton, R. F., D. H. Moak, and P. K. Latham. 1996. {``The Obsessive
+Compulsive Drinking Scale: {A} New Method of Assessing Outcome in
+Alcoholism Treatment Studies.''} \emph{Archives of General Psychiatry}
+53 (3): 225--31.
+\url{https://doi.org/10.1001/archpsyc.1996.01830030047008}.
+
+\bibitem[\citeproctext]{ref-babor1992TypesAlcoholicsEvidence}
+Babor, Thomas F., Michael Hofmann, Frances K. DelBoca, Victor
+Hesselbrock, Roger E. Meyer, Zelig S. Dolinsky, and Bruce Rounsaville.
+1992. {``Types of {Alcoholics}, {I}: {Evidence} for an {Empirically
+Derived Typology Based} on {Indicators} of {Vulnerability} and
+{Severity}.''} \emph{Archives of General Psychiatry} 49 (8): 599--608.
+\url{https://doi.org/10.1001/archpsyc.1992.01820080007002}.
+
+\bibitem[\citeproctext]{ref-bauer2015SerotonergicGeneVariation}
+Bauer, Isabelle E, David P Graham, Jair C Soares, and David A Nielsen.
+2015. {``Serotonergic {Gene Variation} in {Substance Use
+Pharmacotherapy}: {A Systematic Review}.''} \emph{Pharmacogenomics} 16
+(11): 1305--12. \url{https://doi.org/10.2217/pgs.15.72}.
+
+\bibitem[\citeproctext]{ref-bharadwaj2018PharmacotherapyRelapsePrevention}
+Bharadwaj, Balaji, Nivedhitha Selvakumar, and PoojaPatnaik Kuppili.
+2018. {``Pharmacotherapy for Relapse Prevention of Alcohol Use Disorder
+in the {Indian} Setting: {A} Systematic Review.''} \emph{Industrial
+Psychiatry Journal} 27 (2): 163.
+\url{https://doi.org/10.4103/ipj.ipj_79_17}.
+
+\bibitem[\citeproctext]{ref-brown2021RandomizedDoubleblindPlacebocontrolled}
+Brown, E. Sherwood, Meagan McArdle, Jayme Palka, Collette Bice, Elena
+Ivleva, Alyson Nakamura, Markey McNutt, Zena Patel, Traci Holmes, and
+Shane Tipton. 2021. {``A Randomized, Double-Blind, Placebo-Controlled
+Proof-of-Concept Study of Ondansetron for Bipolar and Related Disorders
+and Alcohol Use Disorder.''} \emph{European Neuropsychopharmacology} 43
+(February): 92--101.
+\url{https://doi.org/10.1016/j.euroneuro.2020.12.006}.
+
+\bibitem[\citeproctext]{ref-castren2019SelectingAppropriateAlcohol}
+Castrén, Sari, Niklas Mäkelä, and Hannu Alho. 2019. {``Selecting an
+Appropriate Alcohol Pharmacotherapy.''} \emph{Current Opinion in
+Psychiatry} 32 (4): 266--74.
+\url{https://doi.org/10.1097/YCO.0000000000000512}.
+
+\bibitem[\citeproctext]{ref-cloninger1987SystematicMethodClinical}
+Cloninger, C. R. 1987. {``A Systematic Method for Clinical Description
+and Classification of Personality Variants. {A} Proposal.''}
+\emph{Archives of General Psychiatry} 44 (6): 573--88.
+\url{https://doi.org/10.1001/archpsyc.1987.01800180093014}.
+
+\bibitem[\citeproctext]{ref-correafilho2013PilotStudyFulldose}
+Corrêa Filho, João Maria, and Danilo Antonio Baltieri. 2013. {``A Pilot
+Study of Full-Dose Ondansetron to Treat Heavy-Drinking Men Withdrawing
+from Alcohol in {Brazil}.''} \emph{Addictive Behaviors} 38 (4):
+2044--51. \url{https://doi.org/10.1016/j.addbeh.2012.12.018}.
+
+\bibitem[\citeproctext]{ref-cservenka2016ReviewPharmacogeneticsAlcoholism}
+Cservenka, Anita, Megan M. Yardley, and Lara A. Ray. 2016. {``Review:
+{Pharmacogenetics} of Alcoholism Treatment: {Implications} of Ethnic
+Diversity.''} \emph{The American Journal on Addictions} 26 (5): 516--25.
+\url{https://doi.org/10.1111/ajad.12463}.
+
+\bibitem[\citeproctext]{ref-dawes2005ProspectiveOpenlabelTrial}
+Dawes, Michael A., Bankole A. Johnson, Nassima Ait-Daoud, Jennie Z. Ma,
+and Jack R. Cornelius. 2005. {``A Prospective, Open-Label Trial of
+Ondansetron in Adolescents with Alcohol Dependence.''} \emph{Addictive
+Behaviors} 30 (6): 1077--85.
+\url{https://doi.org/10.1016/j.addbeh.2004.10.011}.
+
+\bibitem[\citeproctext]{ref-dawes2005ReductionsRelationsCraving}
+Dawes, Michael A., Bankole A. Johnson, Jennie Z. Ma, Nassima Ait-Daoud,
+Suzanne E. Thomas, and Jack R. Cornelius. 2005. {``Reductions in and
+Relations Between {`Craving'} and Drinking in a Prospective, Open-Label
+Trial of Ondansetron in Adolescents with Alcohol Dependence.''}
+\emph{Addictive Behaviors} 30 (9): 1630--37.
+\url{https://doi.org/10.1016/j.addbeh.2005.07.004}.
+
+\bibitem[\citeproctext]{ref-grant1991BlockadeDiscriminativeStimulus}
+Grant, Kathleen A., and James E. Barrett. 1991. {``Blockade of the
+Discriminative Stimulus Effects of Ethanol with 5-{HT3} Receptor
+Antagonists.''} \emph{Psychopharmacology} 104 (4): 451--56.
+\url{https://doi.org/10.1007/BF02245648}.
+
+\bibitem[\citeproctext]{ref-hagan1987Effect5HT3Receptor}
+Hagan, Russell M., Arthur Butler, Julia M. Hill, Christopher C. Jordan,
+Simon J. Ireland, and Michael B. Tyers. 1987. {``Effect of the 5-{HT3}
+Receptor Antagonist, {GR38032F}, on Responses to Injection of a
+Neurokinin Agonist into the Ventral Tegmental Area of the Rat Brain.''}
+\emph{European Journal of Pharmacology} 138 (2): 303--5.
+\url{https://doi.org/10.1016/0014-2999(87)90450-X}.
+
+\bibitem[\citeproctext]{ref-hou2015SubgroupIdentificationPersonalized}
+Hou, Jue, Chamindi Seneviratne, Xiaogang Su, Jeremy Taylor, Bankole
+Johnson, Xin‐Qun Wang, Heping Zhang, Henry R. Kranzler, Joseph Kang, and
+Lei Liu. 2015. {``Subgroup {Identification} in {Personalized Treatment}
+of {Alcohol Dependence}.''} \emph{Alcoholism: Clinical and Experimental
+Research} 39 (7): 1253--59. \url{https://doi.org/10.1111/acer.12759}.
+
+\bibitem[\citeproctext]{ref-johnson1993AttenuationAlcoholinducedMood}
+Johnson, B. A., G. M. Campling, P. Griffiths, and P. J. Cowen. 1993.
+{``Attenuation of Some Alcohol-Induced Mood Changes and the Desire to
+Drink by 5-{HT3} Receptor Blockade: A Preliminary Study in Healthy Male
+Volunteers.''} \emph{Psychopharmacology} 112 (1): 142--44.
+\url{https://doi.org/10.1007/bf02247375}.
+
+\bibitem[\citeproctext]{ref-johnson2003OndansetronReducesMood}
+Johnson, Bankole A., Nassima Ait‐Daoud, Jennie Z. Ma, and Yanmei Wang.
+2003. {``Ondansetron {Reduces Mood Disturbance Among Biologically
+Predisposed}, {Alcohol}‐{Dependent Individuals}.''} \emph{Alcoholism:
+Clinical and Experimental Research} 27 (11): 1773--79.
+\url{https://doi.org/10.1097/01.ALC.0000095635.46911.5D}.
+
+\bibitem[\citeproctext]{ref-johnson2000CombiningOndansetronNaltrexone}
+Johnson, Bankole A., Nassima Ait‐Daoud, and Thomas J. Prihoda. 2000.
+{``Combining {Ondansetron} and {Naltrexone Effectively Treats
+Biologically Predisposed Alcoholics}: {From Hypotheses} to {Preliminary
+Clinical Evidence}.''} \emph{Alcoholism: Clinical and Experimental
+Research} 24 (5): 737--42.
+\url{https://doi.org/10.1111/j.1530-0277.2000.tb02048.x}.
+
+\bibitem[\citeproctext]{ref-johnson2011PharmacogeneticApproachSerotonin}
+Johnson, Bankole A., Nassima Ait-Daoud, Chamindi Seneviratne, John D.
+Roache, Martin A. Javors, Xin-Qun Wang, Lei Liu, J. Kim Penberthy, Carlo
+C. DiClemente, and Ming D. Li. 2011. {``Pharmacogenetic {Approach} at
+the {Serotonin Transporter Gene} as a {Method} of {Reducing} the
+{Severity} of {Alcohol Drinking}.''} \emph{American Journal of
+Psychiatry} 168 (3): 265--75.
+\url{https://doi.org/10.1176/appi.ajp.2010.10050755}.
+
+\bibitem[\citeproctext]{ref-johnson2000AgeOnsetDiscriminator}
+Johnson, Bankole A., C. Robert Cloninger, John D. Roache, Patrick S.
+Bordnick, and Pedro Ruiz. 2000. {``Age of {Onset} as a {Discriminator
+Between Alcoholic Subtypes} in a {Treatment}‐{Seeking Outpatient
+Population}.''} \emph{The American Journal on Addictions} 9 (1): 17--27.
+\url{https://doi.org/10.1080/10550490050172191}.
+
+\bibitem[\citeproctext]{ref-johnson2002OndansetronReducesCraving}
+Johnson, Bankole A., John D. Roache, Nassima Ait-Daoud, Nursen A. Zanca,
+and Madeline Velazquez. 2002. {``Ondansetron Reduces the Craving of
+Biologically Predisposed Alcoholics.''} \emph{Psychopharmacology} 160
+(4): 408--13. \url{https://doi.org/10.1007/s00213-002-1002-9}.
+
+\bibitem[\citeproctext]{ref-johnson2000OndansetronReductionDrinking}
+Johnson, Bankole A., John D. Roache, Martin A. Javors, Carlo C.
+DiClemente, Claude Robert Cloninger, Thomas J. Prihoda, Patrick S.
+Bordnick, Nassima Ait-Daoud, and Julie Hensler. 2000. {``Ondansetron for
+{Reduction} of {Drinking Among Biologically Predisposed Alcoholic
+Patients}.''} \emph{JAMA} 284 (8): 963.
+\url{https://doi.org/10.1001/jama.284.8.963}.
+
+\bibitem[\citeproctext]{ref-johnson2013DeterminationGenotypeCombinations}
+Johnson, Bankole A., Chamindi Seneviratne, Xin-Qun Wang, Nassima
+Ait-Daoud, and Ming D. Li. 2013. {``Determination of {Genotype
+Combinations That Can Predict} the {Outcome} of the {Treatment} of
+{Alcohol Dependence Using} the 5-{HT}{\textsubscript{3}} {Antagonist
+Ondansetron}.''} \emph{American Journal of Psychiatry} 170 (9):
+1020--31. \url{https://doi.org/10.1176/appi.ajp.2013.12091163}.
+
+\bibitem[\citeproctext]{ref-kenna2009WithinGroupDesignNontreatment}
+Kenna, George A., William H. Zywiak, John E. McGeary, Lorenzo Leggio,
+Chinatsu McGeary, Shirley Wang, Andrea Grenga, and Robert M. Swift.
+2009. {``A {Within}‐{Group Design} of {Nontreatment Seeking} 5‐{HTTLPR
+Genotyped Alcohol}‐{Dependent Subjects Receiving Ondansetron} and
+{Sertraline}.''} \emph{Alcoholism: Clinical and Experimental Research}
+33 (2): 315--23. \url{https://doi.org/10.1111/j.1530-0277.2008.00835.x}.
+
+\bibitem[\citeproctext]{ref-kenna2014OndansetronSertralineMay}
+Kenna, George A., William H. Zywiak, Robert M. Swift, John E. McGeary,
+James S. Clifford, Jessica R. Shoaff, Samuel Fricchione, et al. 2014.
+{``Ondansetron and Sertraline May Interact with 5-{HTTLPR} and {DRD4}
+Polymorphisms to Reduce Drinking in Non-Treatment Seeking
+Alcohol-Dependent Women: {Exploratory} Findings.''} \emph{Alcohol} 48
+(6): 515--22. \url{https://doi.org/10.1016/j.alcohol.2014.04.005}.
+
+\bibitem[\citeproctext]{ref-kenna2014OndansetronReducesNaturalistic}
+Kenna, George A., William H. Zywiak, Robert M. Swift, John E. McGeary,
+James S. Clifford, Jessica R. Shoaff, Cynthia Vuittonet, et al. 2014.
+{``Ondansetron {Reduces Naturalistic Drinking} in {Nontreatment-Seeking
+Alcohol-Dependent Individuals} with the {LL} 5'-{HTTLPR Genotype}: {A
+Laboratory Study}.''} \emph{Alcoholism: Clinical and Experimental
+Research} 38 (6): 1567--74. \url{https://doi.org/10.1111/acer.12410}.
+
+\bibitem[\citeproctext]{ref-kranzler2003EffectsOndansetronEarly}
+Kranzler, Henry R., Amira Pierucci‐Lagha, Richard Feinn, and Carlos
+Hernandez‐Avila. 2003. {``Effects of {Ondansetron} in {Early}‐ {Versus
+Late}‐{Onset Alcoholics}: {A Prospective}, {Open}‐{Label Study}.''}
+\emph{Alcoholism: Clinical and Experimental Research} 27 (7): 1150--55.
+\url{https://doi.org/10.1097/01.ALC.0000075547.77464.76}.
+
+\bibitem[\citeproctext]{ref-mcguinness2020RiskofbiasVISualizationRobvis}
+McGuinness, Luke A., and Julian P. T. Higgins. 2020. {``Risk‐of‐bias
+{VISualization} (Robvis): {An R} Package and {Shiny} Web App for
+Visualizing Risk‐of‐bias Assessments.''} \emph{Research Synthesis
+Methods} 12 (1): 55--61. \url{https://doi.org/10.1002/jrsm.1411}.
+
+\bibitem[\citeproctext]{ref-Mcnair1989ProfileOM}
+Mcnair, Douglas M., Maurice Lorr, and Leo F. Droppleman. 1989.
+{``Profile of Mood States ({POMS}).''} In.
+\url{https://api.semanticscholar.org/CorpusID:142896988}.
+
+\bibitem[\citeproctext]{ref-myrick2008EffectNaltrexoneOndansetron}
+Myrick, Hugh, Raymond F Anton, Xingbao Li, Scott Henderson, Patrick K
+Randall, and Konstantin Voronin. 2008. {``Effect of {Naltrexone} and
+{Ondansetron} on {Alcohol Cue}--{Induced Activation} of the {Ventral
+Striatum} in {Alcohol-Dependent People}.''} \emph{ARCH GEN PSYCHIATRY}
+65 (4): 10.
+
+\bibitem[\citeproctext]{ref-naglich2017SystematicReviewCombined}
+Naglich, Andrew C., Austin Lin, Sidarth Wakhlu, and Bryon H. Adinoff.
+2017. {``Systematic {Review} of {Combined Pharmacotherapy} for the
+{Treatment} of {Alcohol Use Disorder} in {Patients Without Comorbid
+Conditions}.''} \emph{CNS Drugs} 32 (1): 13--31.
+\url{https://doi.org/10.1007/s40263-017-0484-2}.
+
+\bibitem[\citeproctext]{ref-peterson2011NewcastleOttawaScaleNOS}
+Peterson, J, V Welch, M Losos, and PJOOHRI Tugwell. 2011. {``The
+{Newcastle-Ottawa} Scale ({NOS}) for Assessing the Quality of
+Nonrandomised Studies in Meta-Analyses.''} \emph{Ottawa: Ottawa Hospital
+Research Institute}, 1--12.
+
+\bibitem[\citeproctext]{ref-roache2008PredictionSerotonergicTreatment}
+Roache, John D., Yanmei Wang, Nassima Ait‐Daoud, and Bankole A. Johnson.
+2008. {``Prediction of {Serotonergic Treatment Efficacy Using Age} of
+{Onset} and {Type A}/{B Typologies} of {Alcoholism}.''}
+\emph{Alcoholism: Clinical and Experimental Research} 32 (8): 1502--12.
+\url{https://doi.org/10.1111/j.1530-0277.2008.00717.x}.
+
+\bibitem[\citeproctext]{ref-sellers1994ClinicalEfficacy5HT3}
+Sellers, Edward M., Tony Toneatto, Myroslava K. Romach, Gail R. Somer,
+Linda C. Sobell, and Mark B. Sobell. 1994. {``Clinical {Efficacy} of the
+5‐{HT}{\textsubscript{3}} {Antagonist Ondansetron} in {Alcohol Abuse}
+and {Dependence}.''} \emph{Alcoholism: Clinical and Experimental
+Research} 18 (4): 879--85.
+\url{https://doi.org/10.1111/j.1530-0277.1994.tb00054.x}.
+
+\bibitem[\citeproctext]{ref-seneviratne2012SerotoninTransporterGenomic}
+Seneviratne, Chamindi, and Bankole A. Johnson. 2012. {``Serotonin
+{Transporter Genomic Biomarker} for {Quantitative Assessment} of
+{Ondansetron Treatment Response} in {Alcoholics}.''} \emph{Frontiers in
+Psychiatry} 3: 23. \url{https://doi.org/10.3389/fpsyt.2012.00023}.
+
+\bibitem[\citeproctext]{ref-sobell1992TimelineFollowBack}
+Sobell, Linda C., and Mark B. Sobell. 1992. {``Timeline
+{Follow-Back}.''} In \emph{Measuring {Alcohol Consumption}:
+{Psychosocial} and {Biochemical Methods}}, edited by Raye Z. Litten and
+John P. Allen, 41--72. Totowa, NJ: Humana Press.
+\url{https://doi.org/10.1007/978-1-4612-0357-5_3}.
+
+\bibitem[\citeproctext]{ref-sterne2019RoBRevisedTool}
+Sterne, Jonathan A C, Jelena Savović, Matthew J Page, Roy G Elbers,
+Natalie S Blencowe, Isabelle Boutron, Christopher J Cates, et al. 2019.
+{``{RoB} 2: A Revised Tool for Assessing Risk of Bias in Randomised
+Trials.''} \emph{BMJ} 366 (August): l4898.
+\url{https://doi.org/10.1136/bmj.l4898}.
+
+\bibitem[\citeproctext]{ref-thompson2015VariationSerotoninTransporter}
+Thompson, Miles D., and George A. Kenna. 2015. {``Variation in the
+{Serotonin Transporter Gene} and {Alcoholism}: {Risk} and {Response} to
+{Pharmacotherapy}.''} \emph{Alcohol and Alcoholism} 51 (2): 164--71.
+\url{https://doi.org/10.1093/alcalc/agv090}.
+
+\bibitem[\citeproctext]{ref-varma1994CorrelatesEarlyLateonset}
+Varma, Vijoy K., Debasish Basu, Anil Malhotra, Avneet Sharma, and
+Surendra K. Mattoo. 1994. {``Correlates of Early- and Late-Onset Alcohol
+Dependence.''} \emph{Addictive Behaviors} 19 (6): 609--19.
+\url{https://doi.org/10.1016/0306-4603(94)90016-7}.
+
+\end{CSLReferences}
+
+\end{document}
