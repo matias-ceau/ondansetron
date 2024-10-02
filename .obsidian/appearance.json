@@ -1,1 +1,11 @@
-{}
+{
+  "accentColor": "#66800b",
+  "cssTheme": "Minimal",
+  "baseFontSize": 16,
+  "theme": "moonstone",
+  "interfaceFontFamily": "Iosevka Nerd Font Propo,Iosevka Nerd Font",
+  "textFontFamily": "Iosevka Nerd Font",
+  "monospaceFontFamily": "Iosevka Nerd Font Mono",
+  "baseFontSizeAction": true,
+  "showViewHeader": false
+}

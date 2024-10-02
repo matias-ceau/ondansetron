@@ -1,0 +1,184 @@
+{
+  "main": {
+    "id": "af6be4b84fa2316e",
+    "type": "split",
+    "children": [
+      {
+        "id": "02ec88b25fc1d286",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "94173d1242786af1",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ORG/homepage.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": true
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "420c8a2f6092c040",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "2bfd5102555f84b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "EXPORTS/presentations/presentation_reu_24-05-30/diapo_pubmed-search-methods-french-obsidian.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": true
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "51eae51bfd14b018",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "73e68f84378c90d7",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "c006f3f17c45d6dd",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "bb93e2b39b1caf81",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "e062592cb9332f8c",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          }
+        }
+      },
+      {
+        "id": "4654a77a256756c7",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "305b777c2261fce3",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "e971d063d1ebd98e",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "EXPORTS/presentations/presentation_reu_24-05-30/diapo_pubmed-search-methods-french-obsidian.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "0d597246c7bba034",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "EXPORTS/presentations/presentation_reu_24-05-30/diapo_pubmed-search-methods-french-obsidian.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "1711cd5588fea42f",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "EXPORTS/presentations/presentation_reu_24-05-30/diapo_pubmed-search-methods-french-obsidian.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "zk-prefixer:Create new unique note": false,
+      "workspaces:Manage workspace layouts": false,
+      "templater-obsidian:Templater": false,
+      "homepage:Open homepage": false
+    }
+  },
+  "active": "2bfd5102555f84b2",
+  "lastOpenFiles": [
+    "EXPORTS/presentations/presentation_reu_24-05-30/Présentation réunion.md",
+    "NOTES/Untitled.md",
+    "EXPORTS/presentations/presentation_reu_24-05-30/diapo_pubmed-search-methods-french-obsidian.md",
+    "ORG/homepage.md",
+    "ANALYSIS/review_process.md"
+  ]
+}

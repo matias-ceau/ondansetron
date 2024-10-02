@@ -1,0 +1,14 @@
+{
+  "pathToPandoc": "/usr/bin/pandoc",
+  "tooltipDelay": 400,
+  "zoteroGroups": [],
+  "renderCitations": false,
+  "renderCitationsReadingMode": true,
+  "renderLinkCitations": true,
+  "cslLang": "en-US",
+  "hideLinks": false,
+  "showCitekeyTooltips": true,
+  "pathToBibliography": "/home/matias/git/matias-ceau/ondansetron/ondansetron.bib",
+  "cslStyleURL": "https://raw.githubusercontent.com/citation-style-language/styles/master/neuropsychopharmacology.csl",
+  "enableCiteKeyCompletion": true
+}

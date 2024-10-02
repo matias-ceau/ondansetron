@@ -1,0 +1,65 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiCalendar",
+      "LiLibrary",
+      "LiAlertTriangle",
+      "LiFileText",
+      "🗒"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false
+  },
+  "scripts": "LiCode2",
+  "papers": "LiBookA",
+  "data": "LiDatabase",
+  "WIKI": "SiObsidian",
+  "WIKI/0 - attachments": "LiPaperclip",
+  "WIKI/1 - atlas": "LiGlobe",
+  "WIKI/2 - notes": "LiStickyNote",
+  "WIKI/6 - metadata": "SiAwsorganizations",
+  "WIKI/5 - org": "LiCalendarClock",
+  "WIKI/3 - collections": "LiLibrary",
+  "ANALYSIS": {
+    "iconName": "LiCode2",
+    "iconColor": "#ffffff"
+  },
+  "DATA": {
+    "iconName": "LiDatabase",
+    "iconColor": "#ffffff"
+  },
+  "EXPORTS": {
+    "iconName": "LiLogOut",
+    "iconColor": "#ffffff"
+  },
+  "NOTES": {
+    "iconName": "LiFileText",
+    "iconColor": "#ffffff"
+  },
+  "NOTES/CASES": "LiAlertTriangle",
+  "NOTES/REVIEW": "LiLibrary",
+  "ORG": "LiCalendar"
+}

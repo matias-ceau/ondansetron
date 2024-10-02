@@ -1,0 +1,351 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1704398436063,
+      "items": [
+        {
+          "type": "group",
+          "ctime": 1705589321311,
+          "items": [],
+          "title": "ARTICLES"
+        },
+        {
+          "type": "group",
+          "ctime": 1705589304300,
+          "items": [
+            {
+              "type": "graph",
+              "ctime": 1704705371345,
+              "title": "substances",
+              "options": {
+                "collapse-filter": false,
+                "search": "[\"ntype\": substance] ",
+                "showTags": false,
+                "showAttachments": false,
+                "hideUnresolved": false,
+                "showOrphans": true,
+                "collapse-color-groups": false,
+                "colorGroups": [
+                  {
+                    "query": "[\"ntype\": notification]",
+                    "color": {
+                      "a": 1,
+                      "rgb": 11646455
+                    }
+                  },
+                  {
+                    "query": "tag:#included_substance",
+                    "color": {
+                      "a": 1,
+                      "rgb": 14811907
+                    }
+                  },
+                  {
+                    "query": "[\"ntype\": centre]",
+                    "color": {
+                      "a": 1,
+                      "rgb": 43775
+                    }
+                  },
+                  {
+                    "query": "[\"ntype\":symptome]",
+                    "color": {
+                      "a": 1,
+                      "rgb": 16056544
+                    }
+                  },
+                  {
+                    "query": "tag:#excluded_substance",
+                    "color": {
+                      "a": 1,
+                      "rgb": 14580860
+                    }
+                  }
+                ],
+                "collapse-display": false,
+                "showArrow": true,
+                "textFadeMultiplier": -1.5,
+                "nodeSizeMultiplier": 1.03151041666667,
+                "lineSizeMultiplier": 0.44453125,
+                "collapse-forces": false,
+                "centerStrength": 0.518713248970312,
+                "repelStrength": 10,
+                "linkStrength": 1,
+                "linkDistance": 250,
+                "scale": 0.6836179984795004,
+                "close": true
+              }
+            }
+          ],
+          "title": "SUBSTANCES"
+        },
+        {
+          "type": "group",
+          "ctime": 1705589292994,
+          "items": [
+            {
+              "type": "graph",
+              "ctime": 1704705729104,
+              "title": "nots + substances",
+              "options": {
+                "collapse-filter": false,
+                "search": "[\"ntype\": substance] OR [\"ntype\":notification]",
+                "showTags": false,
+                "showAttachments": false,
+                "hideUnresolved": false,
+                "showOrphans": true,
+                "collapse-color-groups": false,
+                "colorGroups": [
+                  {
+                    "query": "[\"ntype\": notification]",
+                    "color": {
+                      "a": 1,
+                      "rgb": 11646455
+                    }
+                  },
+                  {
+                    "query": "tag:#included_substance",
+                    "color": {
+                      "a": 1,
+                      "rgb": 14811907
+                    }
+                  },
+                  {
+                    "query": "[\"ntype\": centre]",
+                    "color": {
+                      "a": 1,
+                      "rgb": 43775
+                    }
+                  },
+                  {
+                    "query": "[\"ntype\":symptome]",
+                    "color": {
+                      "a": 1,
+                      "rgb": 16056544
+                    }
+                  },
+                  {
+                    "query": "tag:#excluded_substance",
+                    "color": {
+                      "a": 1,
+                      "rgb": 14580860
+                    }
+                  }
+                ],
+                "collapse-display": false,
+                "showArrow": true,
+                "textFadeMultiplier": -1.1,
+                "nodeSizeMultiplier": 0.82734375,
+                "lineSizeMultiplier": 1.31223958333333,
+                "collapse-forces": false,
+                "centerStrength": 0.6171875,
+                "repelStrength": 11.3020833333333,
+                "linkStrength": 0.9296875,
+                "linkDistance": 193,
+                "scale": 0.45574533231966696,
+                "close": true
+              }
+            },
+            {
+              "type": "graph",
+              "ctime": 1704398133939,
+              "title": "nots + substances + centres",
+              "options": {
+                "collapse-filter": false,
+                "search": "[\"ntype\": substance] OR [\"ntype\": centre] OR [\"ntype\":notification]",
+                "showTags": false,
+                "showAttachments": true,
+                "hideUnresolved": false,
+                "showOrphans": true,
+                "collapse-color-groups": false,
+                "colorGroups": [
+                  {
+                    "query": "[\"ntype\": notification]",
+                    "color": {
+                      "a": 1,
+                      "rgb": 11646455
+                    }
+                  },
+                  {
+                    "query": "[\"ntype\": substance] a",
+                    "color": {
+                      "a": 1,
+                      "rgb": 14811907
+                    }
+                  },
+                  {
+                    "query": "[\"ntype\": centre]",
+                    "color": {
+                      "a": 1,
+                      "rgb": 43775
+                    }
+                  },
+                  {
+                    "query": "[\"ntype\":symptome]",
+                    "color": {
+                      "a": 1,
+                      "rgb": 16056544
+                    }
+                  }
+                ],
+                "collapse-display": false,
+                "showArrow": true,
+                "textFadeMultiplier": -1.5,
+                "nodeSizeMultiplier": 1.03151041666667,
+                "lineSizeMultiplier": 0.44453125,
+                "collapse-forces": false,
+                "centerStrength": 0.518713248970312,
+                "repelStrength": 10,
+                "linkStrength": 1,
+                "linkDistance": 250,
+                "scale": 0.45574533231966696,
+                "close": false
+              }
+            }
+          ],
+          "title": "NOTS"
+        },
+        {
+          "type": "graph",
+          "ctime": 1704398415096,
+          "title": "all + tags",
+          "options": {
+            "collapse-filter": false,
+            "search": "",
+            "showTags": true,
+            "showAttachments": true,
+            "hideUnresolved": false,
+            "showOrphans": true,
+            "collapse-color-groups": false,
+            "colorGroups": [
+              {
+                "query": "[\"ntype\": notification]",
+                "color": {
+                  "a": 1,
+                  "rgb": 11646455
+                }
+              },
+              {
+                "query": "[\"ntype\": substance] a",
+                "color": {
+                  "a": 1,
+                  "rgb": 14811907
+                }
+              },
+              {
+                "query": "[\"ntype\": centre]",
+                "color": {
+                  "a": 1,
+                  "rgb": 43775
+                }
+              },
+              {
+                "query": "[\"ntype\":symptome]",
+                "color": {
+                  "a": 1,
+                  "rgb": 16056544
+                }
+              }
+            ],
+            "collapse-display": false,
+            "showArrow": true,
+            "textFadeMultiplier": -1.5,
+            "nodeSizeMultiplier": 1.03151041666667,
+            "lineSizeMultiplier": 0.44453125,
+            "collapse-forces": false,
+            "centerStrength": 0.518713248970312,
+            "repelStrength": 10,
+            "linkStrength": 1,
+            "linkDistance": 250,
+            "scale": 0.3038302215464446,
+            "close": false
+          }
+        },
+        {
+          "type": "graph",
+          "ctime": 1704398249949,
+          "title": "all",
+          "options": {
+            "collapse-filter": true,
+            "search": "",
+            "showTags": false,
+            "showAttachments": true,
+            "hideUnresolved": false,
+            "showOrphans": true,
+            "collapse-color-groups": false,
+            "colorGroups": [
+              {
+                "query": "[\"ntype\": notification]",
+                "color": {
+                  "a": 1,
+                  "rgb": 11646455
+                }
+              },
+              {
+                "query": "[\"ntype\": substance] a",
+                "color": {
+                  "a": 1,
+                  "rgb": 14811907
+                }
+              },
+              {
+                "query": "[\"ntype\": centre]",
+                "color": {
+                  "a": 1,
+                  "rgb": 43775
+                }
+              },
+              {
+                "query": "[\"ntype\":symptome]",
+                "color": {
+                  "a": 1,
+                  "rgb": 16056544
+                }
+              }
+            ],
+            "collapse-display": false,
+            "showArrow": true,
+            "textFadeMultiplier": -1.5,
+            "nodeSizeMultiplier": 1.03151041666667,
+            "lineSizeMultiplier": 0.44453125,
+            "collapse-forces": false,
+            "centerStrength": 0.518713248970312,
+            "repelStrength": 10,
+            "linkStrength": 1,
+            "linkDistance": 250,
+            "scale": 0.3038302215464446,
+            "close": false
+          }
+        }
+      ],
+      "title": "GRAPHES"
+    },
+    {
+      "type": "group",
+      "ctime": 1705657705595,
+      "items": [
+        {
+          "type": "group",
+          "ctime": 1706016471050,
+          "items": [
+            {
+              "type": "folder",
+              "ctime": 1706016441348,
+              "path": "NOTES/REVIEW/papers",
+              "title": "papers (folder)"
+            },
+            {
+              "type": "folder",
+              "ctime": 1706016422974,
+              "path": "NOTES/CASES/nots",
+              "title": "nots (folder)"
+            }
+          ],
+          "title": "collections"
+        }
+      ],
+      "title": "REVIEW"
+    }
+  ]
+}

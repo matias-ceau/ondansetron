@@ -1,0 +1,13 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "ntype": "text",
+    "date_creation": "date",
+    "age": "number",
+    "reponse_ecrite": "checkbox",
+    "incluse": "checkbox",
+    "date": "date"
+  }
+}

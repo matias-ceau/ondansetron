@@ -1,1 +1,18 @@
-{}
+{
+  "showLineNumber": true,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "promptDelete": false,
+  "livePreview": false,
+  "propertiesInDocument": "hidden",
+  "trashOption": "local",
+  "attachmentFolderPath": "NOTES/_attachments",
+  "showInlineTitle": false,
+  "showRibbon": false,
+  "defaultViewMode": "preview",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "NOTES",
+  "strictLineBreaks": false,
+  "newLinkFormat": "absolute",
+  "vimMode": true
+}
