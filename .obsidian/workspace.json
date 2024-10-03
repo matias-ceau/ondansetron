@@ -10,18 +10,15 @@
           {
             "id": "a80f9e4386831b7e",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "empty",
-              "state": {},
-              "pinned": true
+              "state": {}
             },
             "group": "52ff33cb8a2596c3"
           },
           {
             "id": "7b87968c6d01bd38",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "localgraph",
               "state": {
@@ -50,45 +47,12 @@
                   "scale": 1,
                   "close": true
                 }
-              },
-              "pinned": true
+              }
             },
             "group": "52ff33cb8a2596c3"
-          },
-          {
-            "id": "d6ae4793d6525e91",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "memoire.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": true
-              }
-            }
           }
         ],
-        "currentTab": 2
-      },
-      {
-        "id": "9edede6748f15fe2",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "2495519cf7988924",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "memoire.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": true
-              }
-            }
-          }
-        ]
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -163,7 +127,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "memoire.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -175,7 +138,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "memoire.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,9 +164,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "memoire.md"
-              }
+              "state": {}
             }
           },
           {
@@ -224,9 +184,7 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "memoire.md"
-              }
+              "state": {}
             }
           },
           {
@@ -260,10 +218,10 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "d6ae4793d6525e91",
+  "active": "7b87968c6d01bd38",
   "lastOpenFiles": [
-    "@johnson2000OndansetronReductionDrinking.md",
     "memoire.md",
+    "@johnson2000OndansetronReductionDrinking.md",
     "old_references.md",
     "EXPORTS/presentations/presentation_reu_24-05-30/diapo_pubmed-search-methods-french-obsidian.md",
     "ANALYSIS/review_process.md",
