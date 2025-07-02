@@ -1,0 +1,443 @@
+{
+  "search_metadata": {
+    "query_term": "(\"ondansetron\"[MeSH Terms] OR \"ondansetron\"[All Fields]) AND (\"alcoholism\"[MeSH Terms] OR \"alcoholism\"[All Fields] OR \"alcohol use disorder\"[All Fields] OR \"alcohol abuse\"[All Fields] OR \"AUD\"[All Fields])",
+    "start_date": null,
+    "end_date": "2024/12/31",
+    "days_back": null,
+    "max_results": 10,
+    "search_date": "2025-07-02T09:19:18.009611",
+    "total_found": "107",
+    "returned_count": 10,
+    "search_params": {
+      "db": "pubmed",
+      "term": "(\"ondansetron\"[MeSH Terms] OR \"ondansetron\"[All Fields]) AND (\"alcoholism\"[MeSH Terms] OR \"alcoholism\"[All Fields] OR \"alcohol use disorder\"[All Fields] OR \"alcohol abuse\"[All Fields] OR \"AUD\"[All Fields])",
+      "retmode": "json",
+      "sort": "pub+date",
+      "datetype": "pdat",
+      "retmax": 10,
+      "maxdate": "2024/12/31"
+    }
+  },
+  "trials": [
+    {
+      "uid": "39089970",
+      "title": "Commentary on Efficacy and Safety of Low dose ondansetron as a prospective precision medicine to treat alcohol use disorder phenotypes.",
+      "pubdate": "2024 Sep",
+      "source": "Eur J Intern Med",
+      "authors": [
+        {
+          "name": "Swift RM",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1016/j.ejim.2024.07.029"
+    },
+    {
+      "uid": "38984671",
+      "title": "Trajectories of craving in the course of pharmacotherapy trials for methamphetamine use disorder.",
+      "pubdate": "2024 Oct",
+      "source": "Addiction",
+      "authors": [
+        {
+          "name": "Mojtabai R",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Susukida R",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Farokhnia M",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Nguyen TQ",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Dunn KE",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Amin-Esmaeili M",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1111/add.16610"
+    },
+    {
+      "uid": "38876929",
+      "title": "Low-dose ondansetron: A candidate prospective precision medicine to treat alcohol use disorder endophenotypes.",
+      "pubdate": "2024 Sep",
+      "source": "Eur J Intern Med",
+      "authors": [
+        {
+          "name": "Johnson B",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Alho H",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Addolorato G",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Lesch OM",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Chick J",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Liu L",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Schuyler V",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1016/j.ejim.2024.06.001"
+    },
+    {
+      "uid": "38747203",
+      "title": "Guidelines for Reasonable and Appropriate Care in the Emergency Department (GRACE-4): Alcohol use disorder and cannabinoid hyperemesis syndrome management in the emergency department.",
+      "pubdate": "2024 May",
+      "source": "Acad Emerg Med",
+      "authors": [
+        {
+          "name": "Borgundvaag B",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Bellolio F",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Miles I",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Schwarz ES",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Sharif S",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Su MK",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Baumgartner K",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Liss DB",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Sheikh H",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Vogel J",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Austin EB",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Upadhye S",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Klaiman M",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Vellend R",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Munkley A",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Carpenter CR",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1111/acem.14911"
+    },
+    {
+      "uid": "38555115",
+      "title": "Repurposing drugs for treatment of alcohol use disorder.",
+      "pubdate": "2024",
+      "source": "Int Rev Neurobiol",
+      "authors": [
+        {
+          "name": "Aubin HJ",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1016/bs.irn.2024.02.002"
+    },
+    {
+      "uid": "38521730",
+      "title": "Safety and compliance of long-term low-dose ondansetron in alcohol use disorder treatment.",
+      "pubdate": "2024 Sep",
+      "source": "Eur J Intern Med",
+      "authors": [
+        {
+          "name": "Addolorato G",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Alho H",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Bresciani M De Andrade P",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Lesch OM",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Liu L",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Johnson B",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1016/j.ejim.2024.03.017"
+    },
+    {
+      "uid": "38128767",
+      "title": "Cold nociception as a measure of hyperalgesia during spontaneous heroin withdrawal in mice.",
+      "pubdate": "2024 Feb",
+      "source": "Pharmacol Biochem Behav",
+      "authors": [
+        {
+          "name": "Hastings LE",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Frye EV",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Carlson ER",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Chuong V",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Matthews AN",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Koob GF",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Vendruscolo LF",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Marchette RCN",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1016/j.pbb.2023.173694"
+    },
+    {
+      "uid": "37158538",
+      "title": "Psychosocial and pharmacologic interventions to reduce harmful alcohol use in low- and middle-income countries.",
+      "pubdate": "2023 May 9",
+      "source": "Cochrane Database Syst Rev",
+      "authors": [
+        {
+          "name": "Greene MC",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Kane J",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Alto M",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Giusto A",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Lovero K",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Stockton M",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "McClendon J",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Nicholson T",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Wainberg ML",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Johnson RM",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Tol WA",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1002/14651858.CD013350.pub2"
+    },
+    {
+      "uid": "37085406",
+      "title": "QT prolongation, torsades des pointes, and cardiac arrest after 4 mg of IV ondansetron.",
+      "pubdate": "2023 Jun",
+      "source": "Am J Emerg Med",
+      "authors": [
+        {
+          "name": "Orozco BS",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Lee SC",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Fuchs RT",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Fushianes GD",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Cole JB",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1016/j.ajem.2023.04.003"
+    },
+    {
+      "uid": "36689190",
+      "title": "Incorporating ondansetron and baclofen in alcohol use disorder treatment.",
+      "pubdate": "2023 Mar",
+      "source": "CJEM",
+      "authors": [
+        {
+          "name": "Ross H",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Harries B",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Szelest I",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Engelbrecht R",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Umhau JC",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1007/s43678-023-00448-8"
+    }
+  ]
+}
