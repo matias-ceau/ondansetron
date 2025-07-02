@@ -4,6 +4,7 @@ import argparse
 from ondansetron.search import main as _search_main
 from ondansetron.update_trials import main as _update_trials_main
 from ondansetron.review import main as _review_main
+from ondansetron.gen_memoire_llm import main as _memoire_llm_main
 
 
 def main() -> None:
@@ -30,6 +31,27 @@ def main() -> None:
     # review subcommand
     subparsers.add_parser(
         "review", help="Interactively suggest and apply edits to manuscript sections"
+    )
+    # memoire-llm subcommand: replicate/improve memoire with recent trials via LLM
+    parser_memoire_llm = subparsers.add_parser(
+        "memoire-llm",
+        help="Generate updated memoire manuscript via LLM, add recent trials, save to manuscript/llm"
+    )
+    parser_memoire_llm.add_argument(
+        "--provider", choices=["perplexity", "openrouter"], default=None,
+        help="LLM provider to use (overrides SEARCH_PROVIDER env)"
+    )
+    parser_memoire_llm.add_argument(
+        "--model", "-m", default=None,
+        help="LLM model identifier for metadata in output filename"
+    )
+    parser_memoire_llm.add_argument(
+        "--output-dir", "-o", default="manuscript/llm",
+        help="Directory to save the generated LLM manuscript"
+    )
+    parser_memoire_llm.add_argument(
+        "input_file", nargs="?", default="manuscript/memoire.md",
+        help="Path to the base memoire manuscript to update"
     )
 
     # help subcommand
@@ -69,6 +91,9 @@ def main() -> None:
     elif args.command == "review":
         sys.argv = [sys.argv[0]] + sys.argv[2:]
         _review_main()
+    elif args.command == "memoire-llm":
+        sys.argv = [sys.argv[0]] + sys.argv[2:]
+        _memoire_llm_main()
     else:
         parser.print_help()
 
