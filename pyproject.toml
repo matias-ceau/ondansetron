@@ -17,6 +17,7 @@ ondansetron = "ondansetron:main"
 ondansetron-search = "ondansetron.search:main"
 ondansetron-update-trials = "ondansetron.update_trials:main"
 ondansetron-review = "ondansetron.review:main"
+ondansetron-compare-trials = "ondansetron.compare_trials:main"
 
 [build-system]
 requires = ["hatchling"]

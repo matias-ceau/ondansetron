@@ -1,18 +1,26 @@
 #!/usr/bin/env python3
-"""Pipeline to fetch recent clinical trials metadata and optionally summarize using an LLM."""
+"""Pipeline to fetch clinical trials metadata and optionally summarize using an LLM."""
 
 import argparse
 import json
 import os
 import sys
+from datetime import datetime, timedelta
+from typing import Dict, List, Optional
 
 import requests
 
 from ondansetron.search import _openrouter_search, _perplexity_search
 
 
-def fetch_new_trials(term: str, days: int = 7, max_results: int = 100) -> list:
-    """Query PubMed for recent clinical trials matching a search term."""
+def fetch_trials_by_date_range(
+    term: str, 
+    start_date: Optional[str] = None, 
+    end_date: Optional[str] = None,
+    days: Optional[int] = None,
+    max_results: int = 100
+) -> Dict:
+    """Query PubMed for clinical trials matching a search term within a date range."""
     url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
     params = {
         "db": "pubmed",
@@ -20,13 +28,44 @@ def fetch_new_trials(term: str, days: int = 7, max_results: int = 100) -> list:
         "retmode": "json",
         "sort": "pub+date",
         "datetype": "pdat",
-        "reldate": days,
         "retmax": max_results,
     }
+    
+    # Handle date parameters - prefer explicit dates over relative days
+    if start_date and end_date:
+        params["mindate"] = start_date
+        params["maxdate"] = end_date
+    elif days is not None:
+        params["reldate"] = days
+    elif end_date:
+        # Search everything up to end_date
+        params["maxdate"] = end_date
+    
     resp = requests.get(url, params=params)
     resp.raise_for_status()
     data = resp.json()
-    return data.get("esearchresult", {}).get("idlist", [])
+    
+    # Return full response with metadata
+    return {
+        "search_metadata": {
+            "query_term": term,
+            "start_date": start_date,
+            "end_date": end_date,
+            "days_back": days,
+            "max_results": max_results,
+            "search_date": datetime.now().isoformat(),
+            "total_found": data.get("esearchresult", {}).get("count", "0"),
+            "returned_count": len(data.get("esearchresult", {}).get("idlist", [])),
+            "search_params": params
+        },
+        "ids": data.get("esearchresult", {}).get("idlist", [])
+    }
+
+
+def fetch_new_trials(term: str, days: int = 7, max_results: int = 100) -> list:
+    """Legacy function - Query PubMed for recent clinical trials matching a search term."""
+    result = fetch_trials_by_date_range(term, days=days, max_results=max_results)
+    return result["ids"]
 
 
 def fetch_metadata(ids: list) -> list:
@@ -98,28 +137,75 @@ def summarize_trial(metadata: dict, api_key: str, api_url: str, provider: str) -
     return ""
 
 
+def load_previous_trials(filepath: str) -> Dict:
+    """Load previously saved trials data."""
+    if not os.path.exists(filepath):
+        return {"search_metadata": {}, "trials": []}
+    
+    with open(filepath, "r") as f:
+        data = json.load(f)
+    
+    # Handle both old and new format
+    if isinstance(data, list):
+        # Old format - just a list of trials
+        return {"search_metadata": {}, "trials": data}
+    else:
+        # New format with metadata
+        return data
+
+
+def compare_trials(old_data: Dict, new_data: Dict) -> Dict:
+    """Compare two trial datasets and identify new trials."""
+    old_ids = {trial.get("uid") for trial in old_data.get("trials", [])}
+    new_trials = [trial for trial in new_data.get("trials", []) if trial.get("uid") not in old_ids]
+    
+    return {
+        "comparison_metadata": {
+            "comparison_date": datetime.now().isoformat(),
+            "old_trials_count": len(old_data.get("trials", [])),
+            "new_search_count": len(new_data.get("trials", [])),
+            "new_trials_found": len(new_trials)
+        },
+        "new_trials": new_trials,
+        "all_trials": new_data.get("trials", [])
+    }
+
+
 def main() -> None:
     """CLI entry point for updating trial metadata and summaries."""
     parser = argparse.ArgumentParser(
-        description="Fetch recent clinical trials and extract metadata/summaries."
+        description="Fetch clinical trials and extract metadata/summaries with comparison capabilities."
     )
     parser.add_argument(
         "--term",
         default=os.environ.get(
-            "PUBMED_SEARCH_TERM", "ondansetron alcohol use disorder"
+            "PUBMED_SEARCH_TERM", 
+            '("ondansetron"[MeSH Terms] OR "ondansetron"[All Fields]) AND ("alcoholism"[MeSH Terms] OR "alcoholism"[All Fields] OR "alcohol use disorder"[All Fields] OR "alcohol abuse"[All Fields] OR "AUD"[All Fields])'
         ),
-        help="Search term for PubMed (default: environment or 'ondansetron alcohol use disorder').",
+        help="Search term for PubMed (default: systematic review MeSH terms strategy or environment variable).",
     )
     parser.add_argument(
         "--days",
         type=int,
-        default=7,
-        help="Look back this many days for new publications (default: 7).",
+        help="Look back this many days for new publications. Mutually exclusive with --start-date/--end-date.",
+    )
+    parser.add_argument(
+        "--start-date",
+        help="Start date for search (YYYY/MM/DD format). Use with --end-date for date range.",
+    )
+    parser.add_argument(
+        "--end-date",
+        help="End date for search (YYYY/MM/DD format). If used alone, searches everything up to this date.",
     )
     parser.add_argument(
         "--output",
-        default="sourcedata/new_trials.json",
-        help="Output path for metadata JSON (default: sourcedata/new_trials.json).",
+        default="sourcedata/trials.json",
+        help="Output path for metadata JSON (default: sourcedata/trials.json).",
+    )
+    parser.add_argument(
+        "--compare",
+        action="store_true",
+        help="Compare with existing data and identify new trials.",
     )
     parser.add_argument(
         "--summarize",
@@ -132,19 +218,65 @@ def main() -> None:
         default=os.environ.get("SEARCH_PROVIDER", "perplexity").lower(),
         help="LLM provider for summaries (default: PERPLEXITY or OPENROUTER).",
     )
+    parser.add_argument(
+        "--max-results",
+        type=int,
+        default=1000,
+        help="Maximum number of results to fetch (default: 1000).",
+    )
     args = parser.parse_args()
 
-    ids = fetch_new_trials(args.term, args.days)
+    # Default to searching everything up to today if no date parameters provided
+    if not args.days and not args.start_date and not args.end_date:
+        args.end_date = datetime.now().strftime("%Y/%m/%d")
+        print(f"No date parameters provided. Searching all trials up to {args.end_date}")
+
+    # Fetch trials using new date-range function
+    search_result = fetch_trials_by_date_range(
+        args.term, 
+        args.start_date, 
+        args.end_date, 
+        args.days,
+        args.max_results
+    )
+    
+    ids = search_result["ids"]
     metadata = fetch_metadata(ids)
+    
     if args.summarize and metadata:
         api_key, api_url = get_search_credentials(args.provider)
+        print(f"Generating summaries for {len(metadata)} trials...")
         for entry in metadata:
             entry["summary"] = summarize_trial(entry, api_key, api_url, args.provider)
 
+    # Create final data structure with metadata
+    final_data = {
+        "search_metadata": search_result["search_metadata"],
+        "trials": metadata
+    }
+
+    # Handle comparison if requested
+    if args.compare:
+        previous_data = load_previous_trials(args.output)
+        comparison = compare_trials(previous_data, final_data)
+        final_data["comparison"] = comparison["comparison_metadata"]
+        
+        print(f"Comparison results:")
+        print(f"  Previous trials: {comparison['comparison_metadata']['old_trials_count']}")
+        print(f"  Current search: {comparison['comparison_metadata']['new_search_count']}")
+        print(f"  New trials found: {comparison['comparison_metadata']['new_trials_found']}")
+        
+        if comparison["new_trials"]:
+            print(f"\nNew trials:")
+            for trial in comparison["new_trials"]:
+                print(f"  - {trial.get('title', 'No title')} ({trial.get('pubdate', 'No date')})")
+
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     with open(args.output, "w") as out_file:
-        json.dump(metadata, out_file, indent=2)
-    print(f"Wrote {len(metadata)} records to {args.output}")
+        json.dump(final_data, out_file, indent=2)
+    
+    print(f"\nWrote {len(metadata)} trials to {args.output}")
+    print(f"Search found {search_result['search_metadata']['total_found']} total matches in PubMed")
 
 
 if __name__ == "__main__":
