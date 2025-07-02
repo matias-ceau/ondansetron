@@ -2,7 +2,7 @@ import http.server
 import socketserver
 import json
 import os
-from tools import get_available_api_keys
+from tools import get_available_api_keys, perplexity_search
 
 PORT = 8000
 
@@ -22,6 +22,19 @@ class ToolServer(http.server.SimpleHTTPRequestHandler):
                     "status": "success",
                     "result": result
                 }
+            elif tool_name == 'perplexity_search':
+                query = tool_params.get('query')
+                if query:
+                    result = perplexity_search(query)
+                    response = {
+                        "status": "success",
+                        "result": result
+                    }
+                else:
+                    response = {
+                        "status": "error",
+                        "message": "Missing 'query' parameter for perplexity_search."
+                    }
             else:
                 response = {
                     "status": "error",
