@@ -1,55 +1,52 @@
-import http.server
-import socketserver
-import json
+from mcp.server.fastmcp import FastMCP
 import os
-from tools import get_available_api_keys, perplexity_search
+import requests
 
-PORT = 8000
+# Create an MCP server
+mcp = FastMCP("Ondansetron Project Tools")
 
-class ToolServer(http.server.SimpleHTTPRequestHandler):
-    def do_POST(self):
-        if self.path == '/run_tool':
-            content_length = int(self.headers['Content-Length'])
-            post_data = self.rfile.read(content_length)
-            tool_request = json.loads(post_data)
+@mcp.tool()
+def get_available_api_keys() -> dict:
+    """
+    Returns a list of available API keys from the environment variables.
+    """
+    api_keys = {}
+    for key, value in os.environ.items():
+        if 'API_KEY' in key.upper():
+            api_keys[key] = value
+    return api_keys
 
-            tool_name = tool_request.get('tool_name')
-            tool_params = tool_request.get('tool_params')
+@mcp.tool()
+def perplexity_search(query: str) -> dict:
+    """
+    Performs a search using the Perplexity API.
+    """
+    api_key = os.environ.get("PERPLEXITY_API_KEY")
+    if not api_key:
+        return {"error": "PERPLEXITY_API_KEY not found in environment variables."}
 
-            if tool_name == 'get_available_api_keys':
-                result = get_available_api_keys()
-                response = {
-                    "status": "success",
-                    "result": result
-                }
-            elif tool_name == 'perplexity_search':
-                query = tool_params.get('query')
-                if query:
-                    result = perplexity_search(query)
-                    response = {
-                        "status": "success",
-                        "result": result
-                    }
-                else:
-                    response = {
-                        "status": "error",
-                        "message": "Missing 'query' parameter for perplexity_search."
-                    }
-            else:
-                response = {
-                    "status": "error",
-                    "message": f"Tool '{tool_name}' not found."
-                }
+    url = "https://api.perplexity.ai/chat/completions"
+    payload = {
+        "model": "llama-3-sonar-large-32k-online",
+        "messages": [
+            {
+                "role": "system",
+                "content": "Be precise and factual."
+            },
+            {
+                "role": "user",
+                "content": query
+            }
+        ]
+    }
+    headers = {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "Authorization": f"Bearer {api_key}"
+    }
 
-            self.send_response(200)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
-            self.wfile.write(json.dumps(response).encode())
-        else:
-            self.send_response(404)
-            self.end_headers()
-            self.wfile.write(b'Not Found')
+    response = requests.post(url, json=payload, headers=headers)
+    return response.json()
 
-with socketserver.TCPServer(("", PORT), ToolServer) as httpd:
-    print("Tool server listening on port", PORT)
-    httpd.serve_forever()
+if __name__ == "__main__":
+    mcp.run()

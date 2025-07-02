@@ -21,7 +21,7 @@ def perplexity_search(query):
 
     url = "https://api.perplexity.ai/chat/completions"
     payload = {
-        "model": "pplx-7b-online",
+        "model": "sonar-small-32k-online",
         "messages": [
             {
                 "role": "system",
@@ -40,4 +40,21 @@ def perplexity_search(query):
     }
 
     response = requests.post(url, json=payload, headers=headers)
+    return response.json()
+
+def list_perplexity_models():
+    """
+    Lists the available models from the Perplexity API.
+    """
+    api_key = os.environ.get("PERPLEXITY_API_KEY")
+    if not api_key:
+        return {"error": "PERPLEXITY_API_KEY not found in environment variables."}
+
+    url = "https://api.perplexity.ai/models"
+    headers = {
+        "accept": "application/json",
+        "Authorization": f"Bearer {api_key}"
+    }
+
+    response = requests.get(url, headers=headers)
     return response.json()
