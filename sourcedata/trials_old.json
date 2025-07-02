@@ -1,0 +1,223 @@
+{
+  "search_metadata": {
+    "query_term": "ondansetron alcohol use disorder",
+    "start_date": null,
+    "end_date": "2024/11/01",
+    "days_back": null,
+    "max_results": 5,
+    "search_date": "2025-07-02T08:50:34.012427",
+    "total_found": "107",
+    "returned_count": 5,
+    "search_params": {
+      "db": "pubmed",
+      "term": "ondansetron alcohol use disorder",
+      "retmode": "json",
+      "sort": "pub+date",
+      "datetype": "pdat",
+      "retmax": 5,
+      "maxdate": "2024/11/01"
+    }
+  },
+  "trials": [
+    {
+      "uid": "39089970",
+      "title": "Commentary on Efficacy and Safety of Low dose ondansetron as a prospective precision medicine to treat alcohol use disorder phenotypes.",
+      "pubdate": "2024 Sep",
+      "source": "Eur J Intern Med",
+      "authors": [
+        {
+          "name": "Swift RM",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1016/j.ejim.2024.07.029"
+    },
+    {
+      "uid": "38984671",
+      "title": "Trajectories of craving in the course of pharmacotherapy trials for methamphetamine use disorder.",
+      "pubdate": "2024 Oct",
+      "source": "Addiction",
+      "authors": [
+        {
+          "name": "Mojtabai R",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Susukida R",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Farokhnia M",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Nguyen TQ",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Dunn KE",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Amin-Esmaeili M",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1111/add.16610"
+    },
+    {
+      "uid": "38876929",
+      "title": "Low-dose ondansetron: A candidate prospective precision medicine to treat alcohol use disorder endophenotypes.",
+      "pubdate": "2024 Sep",
+      "source": "Eur J Intern Med",
+      "authors": [
+        {
+          "name": "Johnson B",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Alho H",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Addolorato G",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Lesch OM",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Chick J",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Liu L",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Schuyler V",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1016/j.ejim.2024.06.001"
+    },
+    {
+      "uid": "38747203",
+      "title": "Guidelines for Reasonable and Appropriate Care in the Emergency Department (GRACE-4): Alcohol use disorder and cannabinoid hyperemesis syndrome management in the emergency department.",
+      "pubdate": "2024 May",
+      "source": "Acad Emerg Med",
+      "authors": [
+        {
+          "name": "Borgundvaag B",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Bellolio F",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Miles I",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Schwarz ES",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Sharif S",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Su MK",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Baumgartner K",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Liss DB",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Sheikh H",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Vogel J",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Austin EB",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Upadhye S",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Klaiman M",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Vellend R",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Munkley A",
+          "authtype": "Author",
+          "clusterid": ""
+        },
+        {
+          "name": "Carpenter CR",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1111/acem.14911"
+    },
+    {
+      "uid": "38555115",
+      "title": "Repurposing drugs for treatment of alcohol use disorder.",
+      "pubdate": "2024",
+      "source": "Int Rev Neurobiol",
+      "authors": [
+        {
+          "name": "Aubin HJ",
+          "authtype": "Author",
+          "clusterid": ""
+        }
+      ],
+      "doi": "doi: 10.1016/bs.irn.2024.02.002"
+    }
+  ]
+}
