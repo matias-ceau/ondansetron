@@ -6,7 +6,7 @@
 
  - **Title**: Ondansetron in alcohol use disorder: a systematic review
  - **Authors**: Matias Ceau, Pr Mélina Fatseas
- - **Date**: November 2024
+ - **Date**: October 2025
  - **Abstract**: Found in the YAML front matter of `manuscript/memoire.md`
  - **Bibliography**: `manuscript/memoire.bib`
  - **Main manuscript**: `manuscript/memoire.md` (Markdown with Pandoc/LaTeX YAML front matter)
