@@ -61,13 +61,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI_INSTRUCTIONS.md",
+                "file": "manuscript/archives/old_references.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "AI_INSTRUCTIONS"
+              "title": "old_references"
             }
           },
           {
@@ -262,6 +262,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "markdown-importer:Open format converter": false,
       "zk-prefixer:Create new unique note": false,
       "workspaces:Manage workspace layouts": false,
@@ -275,11 +276,11 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "d417a0f4ad02f598",
+  "active": "6d5dc1684449ffdb",
   "lastOpenFiles": [
     "manuscript/llm/250600-Perplexity.md",
-    "OpenCode.md",
     "AI_INSTRUCTIONS.md",
+    "OpenCode.md",
     "CLAUDE.md",
     "ressources/ex_criteres_quali.pdf",
     "manuscript/archives/old_references.md",
