@@ -1,1 +1,117 @@
+# Aider
 .aider*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pytest_cache/
+htmlcov/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# LaTeX
+*.aux
+*.log
+*.toc
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Manuscript builds (keep final outputs)
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.out
+manuscript/*.toc
+manuscript/*.bbl
+manuscript/*.blg
+manuscript/*.synctex.gz
+manuscript/*.fdb_latexmk
+manuscript/*.fls
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.~*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# API keys and secrets (never commit these!)
+.env
+.env.local
+.env.*.local
+*.key
+secrets.json
+credentials.json
+
+# Large data files (consider Git LFS)
+*.faiss
+*.pkl
+*.pickle
+
+# Archives (if regenerated)
+# manuscript/archives/
+
+# Build outputs that can be regenerated
+# manuscript/memoire.pdf
+# manuscript/memoire.docx
+# manuscript/memoire.tex
