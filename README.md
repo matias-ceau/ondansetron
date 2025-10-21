@@ -342,14 +342,17 @@ See [AGENTS.md](AGENTS.md) for multi-agent coordination guidelines.
 
 ## 📖 Documentation
 
-This project includes multiple documentation files tailored for different audiences and AI assistants:
+This project includes comprehensive documentation tailored for different audiences and AI assistants:
 
 - **[README.md](README.md)** (this file): General project overview and usage guide
+- **[DOCUMENTATION.md](DOCUMENTATION.md)**: **Documentation index and quick navigation guide**
 - **[AGENTS.md](AGENTS.md)**: Multi-agent workflow coordination and guidelines
 - **[TODO.md](TODO.md)**: Project roadmap, tasks, and future improvements
 - **[CLAUDE.md](CLAUDE.md)**: Instructions for Claude Code assistant
 - **[AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md)**: General AI agent instructions
 - **[OpenCode.md](OpenCode.md)**: OpenCode-specific guidelines
+
+**→ See [DOCUMENTATION.md](DOCUMENTATION.md) for a complete guide to all documentation.**
 
 ## 🔑 Environment Variables
 
