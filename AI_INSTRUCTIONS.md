@@ -1,56 +1,160 @@
- # AI Agent Instructions
+# AI Agent Instructions
 
- This file provides instructions and context to guide the AI assistant (Codex CLI) when working on this repository.
+This file provides instructions and context to guide general AI assistants when working on this repository.
 
- ## Project Overview
+> **📖 For comprehensive project information, see [README.md](README.md)**  
+> **🤖 For multi-agent coordination, see [AGENTS.md](AGENTS.md)**  
+> **📋 For tasks and roadmap, see [TODO.md](TODO.md)**
 
- - **Title**: Ondansetron in alcohol use disorder: a systematic review
- - **Authors**: Matias Ceau, Pr Mélina Fatseas
- - **Date**: October 2025
- - **Abstract**: Found in the YAML front matter of `manuscript/memoire.md`
- - **Bibliography**: `manuscript/memoire.bib`
- - **Main manuscript**: `manuscript/memoire.md` (Markdown with Pandoc/LaTeX YAML front matter)
- - **Build**:
-   - Requires Pandoc and LaTeX for PDF generation
-   - Run `make pdf` in the `manuscript` directory to generate `memoire.pdf`
-   - Run `make docx` in the `manuscript` directory to generate `memoire.docx`
- - **Archives**:
-   - Old references: `manuscript/archives/old_references.md`
-   - Previous drafts: Word and PDF files in `sourcedata/`
-   - LaTeX archives: `manuscript/archives/tex/`, `manuscript/archives/tex_old/`
+## Quick Reference
 
- ## Code and Data
+### Project Type
+Academic research project: Master's thesis on **Ondansetron in alcohol use disorder** - systematic review with Python CLI automation tools.
 
- - **Python package**: `src/ondansetron` (stub with a `main()` entry point)
- - **Notebook**: `ondansetron.ipynb` for interactive analysis
- - **Resources**: PDFs in `ressources/` (e.g., PRISMA checklist, Cochrane tools)
- - **Raw data**: Word documents and spreadsheets in `sourcedata/`
+### Project Overview
 
- ## Typical Tasks
+- **Title**: Ondansetron in alcohol use disorder: a systematic review
+- **Authors**: Matias Ceau, Pr Mélina Fatseas
+- **Date**: November 2024
+- **Abstract**: Found in the YAML front matter of `manuscript/memoire.md`
+- **Bibliography**: `manuscript/memoire.bib` and `ondansetron.bib`
+- **Main manuscript**: `manuscript/memoire.md` (Markdown with Pandoc/LaTeX YAML front matter)
 
- - Edit manuscript text in `manuscript/memoire.md`
- - Add and format citations in `manuscript/memoire.bib`
- - Run `make` commands in `manuscript/` for PDF/DOCX generation
- - Update tables and figures; manage files in `ressources/`
- - Maintain archives under `manuscript/archives/`
- - Run or modify Python code in `src/ondansetron` and notebooks as needed
+### Key Commands
 
- ## Additional Tool Development Goals
+**Build manuscript:**
+```bash
+cd manuscript
+make pdf   # Generate memoire.pdf
+make docx  # Generate memoire.docx
+```
 
- - Develop Python tools for automating literature search and retrieval using machine learning and LLMs
- - Implement data science workflows for data extraction, processing, and visualization of study characteristics
- - Create interactive visualizations (plots, dashboards) to track paper metrics and study results
- - Integrate LLM-based summarization and draft revision utilities to assist in updating the manuscript
-- Build a search interface over the bibliography and notes to quickly find and cite relevant references
-- Initial implementation: `ondansetron-search` CLI tool using the Perplexity API (`src/ondansetron/search.py`)
+**Run CLI tools:**
+```bash
+uv run ondansetron --help
+uv run ondansetron search "query"
+uv run ondansetron update-trials --term "ondansetron alcohol" --days 30
+uv run ondansetron review manuscript/memoire.md
+```
 
- ## Guidelines
+### Project Structure
 
-- Preserve the YAML front matter in `manuscript/memoire.md`
- - Follow existing Markdown and citation styles
- - When updating references, ensure consistency in `manuscript/memoire.bib`
-- Use `rg` to search (avoid `grep` or `ls -R`)
-- Use `uv add <package>` to add Python dependencies via uv.
-- Use `uv run <script>` to run the project scripts (e.g., `ondansetron`, `ondansetron-search`).
-- Use `uv help` or `uv help <cmd>` for uv usage and available commands.
-- Keep changes minimal and aligned with the writing style
+- `manuscript/` - Main manuscript and outputs
+  - `memoire.md` - Master manuscript (Markdown + YAML)
+  - `memoire.bib` - Bibliography
+  - `archives/` - Previous versions
+- `src/ondansetron/` - Python CLI tools package
+- `sourcedata/` - Clinical trials and analysis data
+- `ressources/` - PDFs, PRISMA flowchart, vector index
+- `tests/` - Test suite
+
+
+## Code and Data
+
+- **Python package**: `src/ondansetron/` - Complete CLI toolkit with multiple tools
+  - `search.py` - LLM-powered literature search
+  - `update_trials.py` - Clinical trials metadata fetching
+  - `review.py` - Manuscript review assistant
+  - `compare_trials.py` - Trial comparison tool
+  - `gen_memoire_llm.py` - LLM manuscript generation
+  - `generate_prisma.py` - PRISMA flowchart generator
+  - `build_vector_index.py` - Vector search index builder
+  - `get_keys.py` - API key management
+- **Notebooks**: `ondansetron.ipynb`, `presentation.ipynb` for interactive analysis
+- **Resources**: PDFs in `ressources/` (PRISMA checklist, Cochrane tools, vector index)
+- **Raw data**: JSON files in `sourcedata/` (trials, historical analyses)
+
+### CLI Tools Available
+
+```bash
+uv run ondansetron --help                    # Main CLI with all subcommands
+uv run ondansetron search "query"            # LLM-powered search
+uv run ondansetron update-trials --days 30   # Fetch recent trials
+uv run ondansetron review manuscript/memoire.md  # Interactive review
+uv run ondansetron-compare-trials            # Compare trials
+```
+
+See [README.md](README.md) for complete CLI documentation.
+
+## Typical Tasks
+
+### Manuscript Work
+- Edit manuscript text in `manuscript/memoire.md`
+- Add and format citations in `manuscript/memoire.bib`
+- Run `make pdf` or `make docx` in `manuscript/` for generation
+- Update tables and figures; manage files in `ressources/`
+- Maintain archives under `manuscript/archives/`
+
+### Development Work
+- Modify Python code in `src/ondansetron/`
+- Add tests in `tests/`
+- Update documentation
+- Add dependencies with `uv add <package>`
+- Run tests with `uv run pytest`
+
+### Data Management
+- Update trials data in `sourcedata/`
+- Generate visualizations
+- Run analysis scripts
+
+See [TODO.md](TODO.md) for current task priorities.
+
+## Tool Development & Features
+
+### Implemented Tools ✅
+- **ondansetron-search** - LLM-powered literature search (OpenAI/Perplexity/OpenRouter)
+- **ondansetron-update-trials** - Clinical trials fetching and summarization from PubMed
+- **ondansetron-review** - Interactive manuscript review with AI suggestions
+- **ondansetron-compare-trials** - Trial comparison and analysis
+- **Vector search** - FAISS-based semantic search over papers
+- **PRISMA generator** - Automated flowchart generation
+
+### Development Goals (See [TODO.md](TODO.md))
+- Automated study screening using NLP
+- Data extraction from PDFs (OCR + NLP)
+- Meta-analysis tools with forest plots
+- Interactive visualizations and dashboards
+- Living systematic review automation
+- Cost-effectiveness analysis tools
+
+For detailed task list and roadmap, see **[TODO.md](TODO.md)**.
+## Key Guidelines
+
+### General Principles
+- **Preserve YAML front matter** in `manuscript/memoire.md` - never modify it unintentionally
+- **Keep changes minimal** and aligned with existing writing style
+- **Follow existing patterns** in code, documentation, and manuscript
+- **Coordinate with other agents** - see [AGENTS.md](AGENTS.md) for workflow
+
+### Code Development
+- Use `uv add <package>` to add Python dependencies
+- Use `uv run <script>` to run project scripts (e.g., `ondansetron`, `ondansetron-search`)
+- Use `rg` for searching (not `grep` or `ls -R`)
+- Follow code style in [OpenCode.md](OpenCode.md)
+- Run tests with `uv run pytest`
+
+### Manuscript Editing
+- Preserve YAML front matter in `manuscript/memoire.md`
+- Follow existing Markdown and citation styles
+- Ensure citation consistency in `manuscript/memoire.bib`
+- Test PDF generation after changes: `cd manuscript && make pdf`
+
+### Multi-Agent Coordination
+- **Create new branch** for each task: `git checkout -b agent-name/task`
+- **Check [AGENTS.md](AGENTS.md)** before editing shared files
+- **Update TODO.md** with your progress
+- **Commit regularly** with clear messages
+- **See [AGENTS.md](AGENTS.md)** for complete coordination guidelines
+
+## Documentation Files
+
+This project includes multiple documentation files:
+
+- **[README.md](README.md)** - Comprehensive project overview, installation, usage
+- **[AGENTS.md](AGENTS.md)** - Multi-agent workflow coordination guidelines
+- **[TODO.md](TODO.md)** - Project roadmap, tasks, and progress tracking
+- **[CLAUDE.md](CLAUDE.md)** - Claude Code specific instructions
+- **[OpenCode.md](OpenCode.md)** - OpenCode development guidelines
+- **AI_INSTRUCTIONS.md** (this file) - General AI agent instructions
+
+**Always check these files before starting work to understand context and avoid conflicts.**
