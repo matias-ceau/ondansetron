@@ -1,5 +1,11 @@
 # OpenCode Guidelines
 
+This file provides OpenCode-specific development guidelines for this repository.
+
+> **📖 For comprehensive project information, see [README.md](README.md)**  
+> **🤖 For multi-agent coordination, see [AGENTS.md](AGENTS.md)**  
+> **📋 For tasks and roadmap, see [TODO.md](TODO.md)**
+
 ## Build & Test
 - Install dependencies: `uv add <package>`
 - Run CLI tools: `uv run ondansetron`, `uv run ondansetron-search "query"`, etc.
@@ -21,3 +27,14 @@
 
 ## Notebooks
 - Launch with Jupyter or convert: `jupyter nbconvert --to html presentation.ipynb`
+
+## Related Documentation
+
+- **[README.md](README.md)** - Complete project overview, installation, usage, CLI documentation
+- **[AGENTS.md](AGENTS.md)** - Multi-agent workflow coordination and guidelines
+- **[TODO.md](TODO.md)** - Project roadmap, current tasks, and progress tracking
+- **[AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md)** - General AI agent instructions
+- **[CLAUDE.md](CLAUDE.md)** - Claude Code specific instructions
+- **OpenCode.md** (this file) - OpenCode guidelines
+
+**For multi-agent coordination and avoiding conflicts, see [AGENTS.md](AGENTS.md).**
